@@ -1,149 +1,214 @@
 <!DOCTYPE html>
-<html lang="ja"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Tech Portfolio - Projects</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;family=Noto+Sans+JP:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<style type="text/tailwindcss">
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tech Portfolio - Projects</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <style type="text/tailwindcss">
         :root {
-            --bg-color: #111827;
             --primary-color: #3b82f6;
+            --secondary-color: #1e293b;
+            --background-color: #0f172a;
+            --text-primary: #ffffff;
+            --text-secondary: #94a3b8;
+            --accent-color: #1e293b;
             --card-bg-color: #1f2937;
-            --text-primary-color: #FFFFFF;
-            --text-secondary-color: #9ca3af;
             --border-color: #374151;
         }
         body {
-            font-family: 'Spline Sans', 'Noto Sans JP', sans-serif;
+            font-family: 'Spline Sans', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-primary);
         }
     </style>
 </head>
-<body class="bg-[var(--bg-color)] text-[var(--text-primary-color)]">
-<div class="flex flex-col min-h-screen">
-<header class="sticky top-0 z-50 bg-[var(--bg-color)]/80 backdrop-blur-sm">
-<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-20 border-b border-[var(--border-color)]">
-<div class="flex items-center gap-4">
-<svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-<h1 class="text-xl font-bold tracking-tight">Tech Portfolio</h1>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-medium hover:text-[var(--primary-color)] transition-colors" href="#">Projects</a>
-<a class="text-sm font-medium text-[var(--text-secondary-color)] hover:text-[var(--primary-color)] transition-colors" href="#">Skills</a>
-<a class="text-sm font-medium text-[var(--text-secondary-color)] hover:text-[var(--primary-color)] transition-colors" href="#">About</a>
-<a class="text-sm font-medium text-[var(--text-secondary-color)] hover:text-[var(--primary-color)] transition-colors" href="#">Contact</a>
-<button class="flex items-center justify-center rounded-full h-10 px-6 bg-[var(--primary-color)] text-white text-sm font-bold hover:opacity-90 transition-opacity">
-<span>Resume</span>
-</button>
-</nav>
-<button class="md:hidden p-2">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</div>
-</header>
-<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-<div class="max-w-4xl mx-auto">
-<div class="text-center mb-12">
-<h2 class="text-4xl md:text-5xl font-bold tracking-tighter mb-4">Projects</h2>
-<p class="text-lg text-[var(--text-secondary-color)] max-w-2xl mx-auto">
-                        A collection of my most significant projects, showcasing my technical skills and problem-solving abilities.
-                    </p>
-</div>
-<div class="grid gap-8 md:grid-cols-1">
-<div class="group bg-[var(--card-bg-color)] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
-<div class="md:flex">
-<div class="md:w-1/2">
-<img alt="E-commerce Platform" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArecB9OY25keEnS8N2D-F9wUhgEug-RJMVoFZ9KHIZ5obw212Q6bxBoxlIYQIdfgWdJJCZGXLhBgPmPdgTOptxgL2MzZ2wS_RooPayFPy74eiBJ5B3IIp3sFR2axnvqh9zdtFxQIQ13xXWWJRg3XcAXoj4SXekLZ1kQx9L6Kf4YHlGrqU5ZkyOejEBO_JIvqRQ3smMXjjpuFoT1R_0AYpTUX33MV8yVx686SfgIE0bpGIOVqgEsHO-QlbeASzjpXPifBs6BQyEwMU"/>
-</div>
-<div class="p-8 md:w-1/2 flex flex-col justify-center">
-<h3 class="text-2xl font-bold mb-2">E-commerce Platform</h3>
-<p class="text-[var(--text-secondary-color)] mb-4">
-                                    Developed a full-fledged e-commerce platform with user authentication, product catalog, shopping cart, and payment gateway integration.
-                                </p>
-<div class="flex flex-wrap gap-2 mb-6">
-<span class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">React</span>
-<span class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Node.js</span>
-<span class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">MongoDB</span>
-<span class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Stripe</span>
-</div>
-<div class="flex items-center gap-4">
-<a class="inline-flex items-center justify-center rounded-full h-11 px-6 bg-[var(--primary-color)] text-white text-sm font-bold hover:opacity-90 transition-opacity" href="#">
-                                        View Project
-                                    </a>
-<a class="text-[var(--text-secondary-color)] hover:text-[var(--primary-color)] transition-colors" href="#">
-<svg class="w-6 h-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="group bg-[var(--card-bg-color)] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
-<div class="md:flex">
-<div class="md:w-1/2 md:order-2">
-<img alt="Data Analysis Dashboard" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqRQY7moQaogv05zvQG8vn1MpDlL3n6xk0kZJBtnnQ7g5ky0hOv1hUKMTBviKSH1rOtOMkeWbI5N7nbMZjzThyTRjexgiKmA8wzLK2zsVLzPAnLP2oLzGG1fHmlRx_BxZhmM1wDgxob_rvhtk6yH2qxaAdEycxpSZwJcMdEDQleMOYEkNS9pbZw7l6oimGCCEZDpguD6gSdmz-Ed3c2DS8GBQsNOTm21k-gzef60hUCvOPU8l-C8x5QMkfaKxgwZGIWfG5SvmISSo"/>
-</div>
-<div class="p-8 md:w-1/2 flex flex-col justify-center">
-<h3 class="text-2xl font-bold mb-2">Data Analysis Dashboard</h3>
-<p class="text-[var(--text-secondary-color)] mb-4">
-                                     Built an interactive dashboard to visualize and analyze large datasets, providing insights into key performance indicators.
-                                </p>
-<div class="flex flex-wrap gap-2 mb-6">
-<span class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Python</span>
-<span class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Flask</span>
-<span class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Pandas</span>
-<span class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Plotly</span>
-</div>
-<div class="flex items-center gap-4">
-<a class="inline-flex items-center justify-center rounded-full h-11 px-6 bg-[var(--primary-color)] text-white text-sm font-bold hover:opacity-90 transition-opacity" href="#">
-                                        View Project
-                                    </a>
-<a class="text-[var(--text-secondary-color)] hover:text-[var(--primary-color)] transition-colors" href="#">
-<svg class="w-6 h-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="group bg-[var(--card-bg-color)] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
-<div class="md:flex">
-<div class="md:w-1/2">
-<img alt="Mobile App for Task Management" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABrCfx42xx8LMnOQMZyoYcLNu3HQKl8UzUCMICHTlh6i1KcqvNIeA-94FbNiIMwinFi9EbXArGTtXdkLncKRndrB47lXw5MmKEhAU2F5nfgMVSwAdRm_Rxmr3GKh2iGnK0VT56FAhfHRacRW_E_Oi9qz_dEgIiybFaV6v7qTobyXFQkL4M4ZhAvk0-MueS7xoO5TzjNWoSQoKzj8dOIz3Fj3a4JfBeM0z3HblyaA2GNA0XMvH7rG1LVwVpZDxaJ0B77YZHDii2m7A"/>
-</div>
-<div class="p-8 md:w-1/2 flex flex-col justify-center">
-<h3 class="text-2xl font-bold mb-2">Mobile App for Task Management</h3>
-<p class="text-[var(--text-secondary-color)] mb-4">
-                                   Designed and implemented a mobile application for efficient task management, featuring reminders, categorization, and progress tracking.
-                                </p>
-<div class="flex flex-wrap gap-2 mb-6">
-<span class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Flutter</span>
-<span class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Firebase</span>
-<span class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Dart</span>
-</div>
-<div class="flex items-center gap-4">
-<a class="inline-flex items-center justify-center rounded-full h-11 px-6 bg-[var(--primary-color)] text-white text-sm font-bold hover:opacity-90 transition-opacity" href="#">
-                                        View Project
-                                    </a>
-<a class="text-[var(--text-secondary-color)] hover:text-[var(--primary-color)] transition-colors" href="#">
-<svg class="w-6 h-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
-<footer class="bg-[var(--bg-color)] border-t border-[var(--border-color)]">
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-[var(--text-secondary-color)]">
-<p>© 2024 Tech Portfolio. All Rights Reserved.</p>
-</div>
-</footer>
-</div>
-</body></html>
+
+<body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+    <div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+        <div class="flex-grow">
+            <header class="sticky top-0 z-20 border-b border-[var(--secondary-color)] bg-[var(--background-color)]/80 backdrop-blur-lg">
+                <div class="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+                    <div class="flex items-center gap-4">
+                        <div class="text-[var(--primary-color)]">
+                            <svg class="lucide lucide-code-xml" fill="none" height="28" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="28"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="m18 16 4-4-4-4"></path>
+                                <path d="m6 8-4 4 4 4"></path>
+                                <path d="m14.5 4-5 16"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-xl font-bold tracking-tight">TechFolio</h2>
+                    </div>
+                    <nav class="hidden items-center gap-8 md:flex">
+                        <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+                            href="./index.html">ホーム</a>
+                        <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+                            href="./career.html">経歴</a>
+                        <a class="text-sm font-medium text-[var(--primary-color)]" href="./projects.html">ポートフォリオ</a>
+                        <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+                            href="./blog.html">ブログ</a>
+                    </nav>
+                    <div class="flex items-center gap-4">
+                        <div class="h-10 w-10 rounded-full bg-cover bg-center"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZW9nM65QCPAnqcGwf0zgqUlgJx9KvNvxVFo-GkbI2RmJ_YhjU2DERgytP9LPFJ-PreVtbSr_Re386UuiRYWvHlE4EtbpR9T9xBilTI8zc2bpZZk0--OOxL1EDsWFXnF2TfEFubXkiTtEJEPYDQI9LElKJYSwaQY_yPgoQf39zP0tC8HG2b_LXvB3tNLVlUBu4LfH_ripDAr50Szxe41zu3zOqyDYOwTdJM_SAjvTltnHGUuVc_TsHf6pmyaRkxwINxReXrSjFyZY");'>
+                        </div>
+                        <button class="md:hidden">
+                            <span class="material-symbols-outlined"> menu </span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <main class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl md:text-5xl font-bold tracking-tighter mb-4">Projects</h2>
+                        <p class="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+                            A collection of my most significant projects, showcasing my technical skills and problem-solving
+                            abilities.
+                        </p>
+                    </div>
+                    <div class="grid gap-8 md:grid-cols-1">
+                        <div
+                            class="group bg-[var(--card-bg-color)] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
+                            <div class="md:flex">
+                                <div class="md:w-1/2">
+                                    <img alt="E-commerce Platform" class="h-full w-full object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuArecB9OY25keEnS8N2D-F9wUhgEug-RJMVoFZ9KHIZ5obw212Q6bxBoxlIYQIdfgWdJJCZGXLhBgPmPdgTOptxgL2MzZ2wS_RooPayFPy74eiBJ5B3IIp3sFR2axnvqh9zdtFxQIQ13xXWWJRg3XcAXoj4SXekLZ1kQx9L6Kf4YHlGrqU5ZkyOejEBO_JIvqRQ3smMXjjpuFoT1R_0AYpTUX33MV8yVx686SfgIE0bpGIOVqgEsHO-QlbeASzjpXPifBs6BQyEwMU" />
+                                </div>
+                                <div class="p-8 md:w-1/2 flex flex-col justify-center">
+                                    <h3 class="text-2xl font-bold mb-2">E-commerce Platform</h3>
+                                    <p class="text-[var(--text-secondary)] mb-4">
+                                        Developed a full-fledged e-commerce platform with user authentication, product
+                                        catalog, shopping cart, and payment gateway integration.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mb-6">
+                                        <span
+                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">React</span>
+                                        <span
+                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Node.js</span>
+                                        <span
+                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">MongoDB</span>
+                                        <span
+                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Stripe</span>
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <a class="inline-flex items-center justify-center rounded-full h-11 px-6 bg-[var(--primary-color)] text-white text-sm font-bold hover:opacity-90 transition-opacity"
+                                            href="#">
+                                            View Project
+                                        </a>
+                                        <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                                            href="#">
+                                            <svg class="w-6 h-6" fill="none" height="24" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="group bg-[var(--card-bg-color)] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
+                            <div class="md:flex">
+                                <div class="md:w-1/2 md:order-2">
+                                    <img alt="Data Analysis Dashboard" class="h-full w-full object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqRQY7moQaogv05zvQG8vn1MpDlL3n6xk0kZJBtnnQ7g5ky0hOv1hUKMTBviKSH1rOtOMkeWbI5N7nbMZjzThyTRjexgiKmA8wzLK2zsVLzPAnLP2oLzGG1fHmlRx_BxZhmM1wDgxob_rvhtk6yH2qxaAdEycxpSZwJcMdEDQleMOYEkNS9pbZw7l6oimGCCEZDpguD6gSdmz-Ed3c2DS8GBQsNOTm21k-gzef60hUCvOPU8l-C8x5QMkfaKxgwZGIWfG5SvmISSo" />
+                                </div>
+                                <div class="p-8 md:w-1/2 flex flex-col justify-center">
+                                    <h3 class="text-2xl font-bold mb-2">Data Analysis Dashboard</h3>
+                                    <p class="text-[var(--text-secondary)] mb-4">
+                                        Built an interactive dashboard to visualize and analyze large datasets, providing
+                                        insights into key performance indicators.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mb-6">
+                                        <span
+                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Python</span>
+                                        <span
+                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Flask</span>
+                                        <span
+                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Pandas</span>
+                                        <span
+                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Plotly</span>
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <a class="inline-flex items-center justify-center rounded-full h-11 px-6 bg-[var(--primary-color)] text-white text-sm font-bold hover:opacity-90 transition-opacity"
+                                            href="#">
+                                            View Project
+                                        </a>
+                                        <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                                            href="#">
+                                            <svg class="w-6 h-6" fill="none" height="24" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="group bg-[var(--card-bg-color)] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
+                            <div class="md:flex">
+                                <div class="md:w-1/2">
+                                    <img alt="Mobile App for Task Management" class="h-full w-full object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuABrCfx42xx8LMnOQMZyoYcLNu3HQKl8UzUCMICHTlh6i1KcqvNIeA-94FbNiIMwinFi9EbXArGTtXdkLncKRndrB47lXw5MmKEhAU2F5nfgMVSwAdRm_Rxmr3GKh2iGnK0VT56FAhfHRacRW_E_Oi9qz_dEgIiybFaV6v7qTobyXFQkL4M4ZhAvk0-MueS7xoO5TzjNWoSQoKzj8dOIz3Fj3a4JfBeM0z3HblyaA2GNA0XMvH7rG1LVwVpZDxaJ0B77YZHDii2m7A" />
+                                </div>
+                                <div class="p-8 md:w-1/2 flex flex-col justify-center">
+                                    <h3 class="text-2xl font-bold mb-2">Mobile App for Task Management</h3>
+                                    <p class="text-[var(--text-secondary)] mb-4">
+                                        Designed and implemented a mobile application for efficient task management,
+                                        featuring reminders, categorization, and progress tracking.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 mb-6">
+                                        <span
+                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Flutter</span>
+                                        <span
+                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Firebase</span>
+                                        <span
+                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Dart</span>
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <a class="inline-flex items-center justify-center rounded-full h-11 px-6 bg-[var(--primary-color)] text-white text-sm font-bold hover:opacity-90 transition-opacity"
+                                            href="#">
+                                            View Project
+                                        </a>
+                                        <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                                            href="#">
+                                            <svg class="w-6 h-6" fill="none" height="24" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="bg-[var(--background-color)] border-t border-[var(--secondary-color)]">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-[var(--text-secondary)]">
+                    <p>© 2024 Tech Portfolio. All Rights Reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
