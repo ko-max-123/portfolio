@@ -1,0 +1,144 @@
+<html><head>
+<meta charset="utf-8"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #3b82f6;
+        --secondary-color: #1e293b;
+        --background-color: #0f172a;
+        --text-primary: #ffffff;
+        --text-secondary: #94a3b8;
+        --accent-color: #1e293b;
+      }
+      body {
+        font-family: 'Spline Sans', sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-primary);
+      }
+      .timeline-item::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 11px;
+        bottom: 0;
+        width: 2px;
+        background-color: var(--secondary-color);
+        z-index: 0;
+      }
+      .timeline-item:last-child::before {
+        display: none;
+      }
+    </style>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+</head>
+<body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+<div class="flex-grow">
+<header class="sticky top-0 z-20 border-b border-[var(--secondary-color)] bg-[var(--background-color)]/80 backdrop-blur-lg">
+<div class="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-4">
+<div class="text-[var(--primary-color)]">
+<svg class="lucide lucide-code-xml" fill="none" height="28" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="m18 16 4-4-4-4"></path>
+<path d="m6 8-4 4 4 4"></path>
+<path d="m14.5 4-5 16"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight">TechFolio</h2>
+</div>
+<nav class="hidden items-center gap-8 md:flex">
+<a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="#">ホーム</a>
+<a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="#">プロフィール</a>
+<a class="text-sm font-medium text-[var(--primary-color)]" href="#">経歴</a>
+<a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="#">スキル</a>
+<a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="#">ポートフォリオ</a>
+<a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="#">コンタクト</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="h-10 w-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCpqUAF-SiG2Or9B_ITDFgT48ZxAYrU6zTZ71WFQ9Sogck_Lna_bfqSihmfEGKCa2hB9xUYJc4d2SICzFj8P9GLL1eB2iDlx27sHTMiJ0y2cacu5bL-aJQx2is76n4tZuwhV3vmJZh3a8n_nqce-gtmB8l3i6OpWqWAv37wGtyHmoDx-q1eGL5CzL0wy50HCXouBobqQhtqLgejQNjqtLcDUcP6VcCQTZPIbYCLZGmGCR2ALGgZOyFmpbc6Het-nS4HcDwoMU26wtM");'></div>
+<button class="md:hidden">
+<span class="material-symbols-outlined"> menu </span>
+</button>
+</div>
+</div>
+</header>
+<main class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+<div class="mx-auto max-w-4xl">
+<h1 class="mb-12 text-center text-4xl font-bold tracking-tighter sm:text-5xl">経歴</h1>
+<div class="space-y-16">
+<section>
+<h2 class="mb-8 text-3xl font-bold tracking-tight text-[var(--primary-color)]">職務経歴</h2>
+<div class="relative flex flex-col gap-8">
+<div class="timeline-item flex gap-6">
+<div class="relative z-10 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--accent-color)] ring-4 ring-[var(--background-color)]">
+<span class="material-symbols-outlined text-base text-[var(--primary-color)]"> work </span>
+</div>
+<div class="flex-1 rounded-lg border border-[var(--secondary-color)] bg-[var(--accent-color)] p-6 transition-shadow hover:shadow-lg hover:shadow-[var(--primary-color)]/10">
+<h3 class="text-xl font-semibold">システム開発企業</h3>
+<p class="mb-3 text-sm text-[var(--text-secondary)]">2020年4月 - 現在</p>
+<p class="text-[var(--text-secondary)]">Webアプリケーションのバックエンド開発を担当。主にJavaとSpring Bootを使用し、マイクロサービスアーキテクチャの設計・開発に従事。チームリーダーとしてプロジェクトの進捗管理とメンバーの技術指導も行う。</p>
+</div>
+</div>
+<div class="timeline-item flex gap-6">
+<div class="relative z-10 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--accent-color)] ring-4 ring-[var(--background-color)]">
+<span class="material-symbols-outlined text-base text-[var(--primary-color)]"> work </span>
+</div>
+<div class="flex-1 rounded-lg border border-[var(--secondary-color)] bg-[var(--accent-color)] p-6 transition-shadow hover:shadow-lg hover:shadow-[var(--primary-color)]/10">
+<h3 class="text-xl font-semibold">アプリ開発企業</h3>
+<p class="mb-3 text-sm text-[var(--text-secondary)]">2018年4月 - 2020年3月</p>
+<p class="text-[var(--text-secondary)]">iOS/Android向けネイティブアプリの開発を担当。Swift, Kotlinを使用し、UI/UXデザインから実装、テストまで一貫して関わる。App Storeでのフィーチャーアプリ選出に貢献。</p>
+</div>
+</div>
+<div class="timeline-item flex gap-6">
+<div class="relative z-10 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--accent-color)] ring-4 ring-[var(--background-color)]">
+<span class="material-symbols-outlined text-base text-[var(--primary-color)]"> work </span>
+</div>
+<div class="flex-1 rounded-lg border border-[var(--secondary-color)] bg-[var(--accent-color)] p-6 transition-shadow hover:shadow-lg hover:shadow-[var(--primary-color)]/10">
+<h3 class="text-xl font-semibold">フリーランス</h3>
+<p class="mb-3 text-sm text-[var(--text-secondary)]">2017年4月 - 2018年3月</p>
+<p class="text-[var(--text-secondary)]">Webサイト制作や小規模な業務システムの開発を請け負う。PHP, JavaScript, WordPressなどを活用し、クライアントの要望に応じた柔軟な開発を経験。</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="mb-8 text-3xl font-bold tracking-tight text-[var(--primary-color)]">学歴</h2>
+<div class="relative flex flex-col gap-8">
+<div class="timeline-item flex gap-6">
+<div class="relative z-10 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--accent-color)] ring-4 ring-[var(--background-color)]">
+<span class="material-symbols-outlined text-base text-[var(--primary-color)]"> school </span>
+</div>
+<div class="flex-1 rounded-lg border border-[var(--secondary-color)] bg-[var(--accent-color)] p-6 transition-shadow hover:shadow-lg hover:shadow-[var(--primary-color)]/10">
+<h3 class="text-xl font-semibold">東京大学大学院工学系研究科情報理工学専攻</h3>
+<p class="mb-3 text-sm text-[var(--text-secondary)]">2017年4月 - 2019年3月</p>
+<p class="text-[var(--text-secondary)]">機械学習と自然言語処理に関する研究室に所属。修士論文では、深層学習を用いた対話システムの性能向上について研究。</p>
+</div>
+</div>
+<div class="timeline-item flex gap-6">
+<div class="relative z-10 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--accent-color)] ring-4 ring-[var(--background-color)]">
+<span class="material-symbols-outlined text-base text-[var(--primary-color)]"> school </span>
+</div>
+<div class="flex-1 rounded-lg border border-[var(--secondary-color)] bg-[var(--accent-color)] p-6 transition-shadow hover:shadow-lg hover:shadow-[var(--primary-color)]/10">
+<h3 class="text-xl font-semibold">東京大学工学部情報系学科</h3>
+<p class="mb-3 text-sm text-[var(--text-secondary)]">2013年4月 - 2017年3月</p>
+<p class="text-[var(--text-secondary)]">コンピュータサイエンスの基礎を幅広く学ぶ。卒業研究では、画像認識アルゴリズムの開発に取り組む。</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+</div>
+<footer class="border-t border-[var(--secondary-color)] bg-[var(--accent-color)]">
+<div class="container mx-auto px-4 py-6 text-center text-sm text-[var(--text-secondary)] sm:px-6 lg:px-8">
+<p>© 2024 TechFolio. All Rights Reserved.</p>
+</div>
+</footer>
+</div>
+</body></html>
