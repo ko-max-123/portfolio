@@ -5,7 +5,7 @@
 ## ページ構成
 
 - `index.html` - ホームページ
-- `projects.html` - プロジェクト一覧
+- `projects.html` - 制作・研究プロジェクト一覧
 - `career.html` - 経歴・スキル
 - `blog.html` - ブログ・記事
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>TechFolio - Projects</title>
+    <title>Tetsuyuki Koyama - 制作・研究プロジェクト</title>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet" />
@@ -25,6 +25,12 @@
             font-family: 'Spline Sans', sans-serif;
             background-color: var(--background-color);
             color: var(--text-primary);
+        }
+        .project-card {
+            @apply rounded-2xl border border-[var(--border-color)] bg-[var(--card-bg-color)] p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-[var(--primary-color)] hover:shadow-2xl hover:shadow-[var(--primary-color)]/10;
+        }
+        .tag {
+            @apply rounded-full bg-[var(--border-color)] px-3 py-1 text-xs font-semibold text-gray-300;
         }
     </style>
 </head>
@@ -47,172 +53,184 @@
                         <h2 class="text-xl font-bold tracking-tight">TechFolio</h2>
                     </div>
                     <nav class="hidden items-center gap-8 md:flex">
-                        <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
-                            href="./index.html">ホーム</a>
-                        <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
-                            href="./career.html">経歴</a>
-                        <a class="text-sm font-medium text-[var(--primary-color)]" href="./projects.html">プロジェクト</a>
+                        <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="./index.html">ホーム</a>
+                        <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="./career.html">経歴</a>
+                        <a class="text-sm font-medium text-[var(--primary-color)]" href="./projects.html">制作・研究</a>
                     </nav>
                     <div class="flex items-center gap-4">
-                        <div class="h-10 w-10 rounded-full bg-cover bg-center"
-                            style='background-image: url("./images/profile.jpg");'>
-                        </div>
+                        <div class="h-10 w-10 rounded-full bg-cover bg-center" style='background-image: url("./images/profile.jpg");'></div>
                         <button class="md:hidden">
                             <span class="material-symbols-outlined"> menu </span>
                         </button>
                     </div>
                 </div>
             </header>
+
             <main class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
-                <!--
-                <div class="max-w-4xl mx-auto">
-                    <div class="text-center mb-12">
-                        <h2 class="text-4xl md:text-5xl font-bold tracking-tighter mb-4">Projects</h2>
-                        <p class="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-                            A collection of my most significant projects, showcasing my technical skills and problem-solving
-                            abilities.
+                <div class="mx-auto max-w-6xl">
+                    <div class="mb-12 text-center">
+                        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-[var(--primary-color)]">Works / Research</p>
+                        <h1 class="text-4xl font-bold tracking-tighter text-white md:text-5xl">制作・研究プロジェクト</h1>
+                        <p class="mx-auto mt-4 max-w-3xl text-lg leading-relaxed text-[var(--text-secondary)]">
+                            Webサイト制作、研究支援、実験用アプリ、業務効率化ツールなど、これまでに作成・公開した成果物をまとめています。
                         </p>
                     </div>
-                    <div class="grid gap-8 md:grid-cols-1">
-                        <div
-                            class="group bg-[var(--card-bg-color)] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
-                            <div class="md:flex">
-                                <div class="md:w-1/2">
-                                    <img alt="E-commerce Platform" class="h-full w-full object-cover"
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuArecB9OY25keEnS8N2D-F9wUhgEug-RJMVoFZ9KHIZ5obw212Q6bxBoxlIYQIdfgWdJJCZGXLhBgPmPdgTOptxgL2MzZ2wS_RooPayFPy74eiBJ5B3IIp3sFR2axnvqh9zdtFxQIQ13xXWWJRg3XcAXoj4SXekLZ1kQx9L6Kf4YHlGrqU5ZkyOejEBO_JIvqRQ3smMXjjpuFoT1R_0AYpTUX33MV8yVx686SfgIE0bpGIOVqgEsHO-QlbeASzjpXPifBs6BQyEwMU" />
-                                </div>
-                                <div class="p-8 md:w-1/2 flex flex-col justify-center">
-                                    <h3 class="text-2xl font-bold mb-2">E-commerce Platform</h3>
-                                    <p class="text-[var(--text-secondary)] mb-4">
-                                        Developed a full-fledged e-commerce platform with user authentication, product
-                                        catalog, shopping cart, and payment gateway integration.
-                                    </p>
-                                    <div class="flex flex-wrap gap-2 mb-6">
-                                        <span
-                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">React</span>
-                                        <span
-                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Node.js</span>
-                                        <span
-                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">MongoDB</span>
-                                        <span
-                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Stripe</span>
-                                    </div>
-                                    <div class="flex items-center gap-4">
-                                        <a class="inline-flex items-center justify-center rounded-full h-11 px-6 bg-[var(--primary-color)] text-white text-sm font-bold hover:opacity-90 transition-opacity"
-                                            href="#">
-                                            View Project
-                                        </a>
-                                        <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
-                                            href="#">
-                                            <svg class="w-6 h-6" fill="none" height="24" stroke="currentColor"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
+
+                    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                        <article class="project-card">
+                            <div class="mb-4 flex items-center gap-3">
+                                <span class="material-symbols-outlined rounded-xl bg-[var(--primary-color)]/10 p-3 text-[var(--primary-color)]">science</span>
+                                <p class="text-sm font-medium text-[var(--text-secondary)]">Web Site</p>
                             </div>
-                        </div>
-                        <div
-                            class="group bg-[var(--card-bg-color)] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
-                            <div class="md:flex">
-                                <div class="md:w-1/2 md:order-2">
-                                    <img alt="Data Analysis Dashboard" class="h-full w-full object-cover"
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqRQY7moQaogv05zvQG8vn1MpDlL3n6xk0kZJBtnnQ7g5ky0hOv1hUKMTBviKSH1rOtOMkeWbI5N7nbMZjzThyTRjexgiKmA8wzLK2zsVLzPAnLP2oLzGG1fHmlRx_BxZhmM1wDgxob_rvhtk6yH2qxaAdEycxpSZwJcMdEDQleMOYEkNS9pbZw7l6oimGCCEZDpguD6gSdmz-Ed3c2DS8GBQsNOTm21k-gzef60hUCvOPU8l-C8x5QMkfaKxgwZGIWfG5SvmISSo" />
-                                </div>
-                                <div class="p-8 md:w-1/2 flex flex-col justify-center">
-                                    <h3 class="text-2xl font-bold mb-2">Data Analysis Dashboard</h3>
-                                    <p class="text-[var(--text-secondary)] mb-4">
-                                        Built an interactive dashboard to visualize and analyze large datasets, providing
-                                        insights into key performance indicators.
-                                    </p>
-                                    <div class="flex flex-wrap gap-2 mb-6">
-                                        <span
-                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Python</span>
-                                        <span
-                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Flask</span>
-                                        <span
-                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Pandas</span>
-                                        <span
-                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Plotly</span>
-                                    </div>
-                                    <div class="flex items-center gap-4">
-                                        <a class="inline-flex items-center justify-center rounded-full h-11 px-6 bg-[var(--primary-color)] text-white text-sm font-bold hover:opacity-90 transition-opacity"
-                                            href="#">
-                                            View Project
-                                        </a>
-                                        <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
-                                            href="#">
-                                            <svg class="w-6 h-6" fill="none" height="24" stroke="currentColor"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
+                            <h2 class="mb-3 text-2xl font-bold">上原研究室 Webサイト</h2>
+                            <p class="mb-5 text-sm leading-relaxed text-[var(--text-secondary)]">
+                                研究室の概要、研究業績、ニュース、メンバー情報などを整理した研究室向けWebサイトです。
+                            </p>
+                            <div class="mb-6 flex flex-wrap gap-2">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">GitHub Pages</span>
                             </div>
-                        </div>
-                        <div
-                            class="group bg-[var(--card-bg-color)] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
-                            <div class="md:flex">
-                                <div class="md:w-1/2">
-                                    <img alt="Mobile App for Task Management" class="h-full w-full object-cover"
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuABrCfx42xx8LMnOQMZyoYcLNu3HQKl8UzUCMICHTlh6i1KcqvNIeA-94FbNiIMwinFi9EbXArGTtXdkLncKRndrB47lXw5MmKEhAU2F5nfgMVSwAdRm_Rxmr3GKh2iGnK0VT56FAhfHRacRW_E_Oi9qz_dEgIiybFaV6v7qTobyXFQkL4M4ZhAvk0-MueS7xoO5TzjNWoSQoKzj8dOIz3Fj3a4JfBeM0z3HblyaA2GNA0XMvH7rG1LVwVpZDxaJ0B77YZHDii2m7A" />
-                                </div>
-                                <div class="p-8 md:w-1/2 flex flex-col justify-center">
-                                    <h3 class="text-2xl font-bold mb-2">Mobile App for Task Management</h3>
-                                    <p class="text-[var(--text-secondary)] mb-4">
-                                        Designed and implemented a mobile application for efficient task management,
-                                        featuring reminders, categorization, and progress tracking.
-                                    </p>
-                                    <div class="flex flex-wrap gap-2 mb-6">
-                                        <span
-                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Flutter</span>
-                                        <span
-                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Firebase</span>
-                                        <span
-                                            class="bg-[var(--border-color)] text-xs font-semibold px-2.5 py-1 rounded-full text-gray-300">Dart</span>
-                                    </div>
-                                    <div class="flex items-center gap-4">
-                                        <a class="inline-flex items-center justify-center rounded-full h-11 px-6 bg-[var(--primary-color)] text-white text-sm font-bold hover:opacity-90 transition-opacity"
-                                            href="#">
-                                            View Project
-                                        </a>
-                                        <a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
-                                            href="#">
-                                            <svg class="w-6 h-6" fill="none" height="24" stroke="currentColor"
-                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
+                            <a class="inline-flex items-center gap-2 rounded-full bg-[var(--primary-color)] px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90" href="https://ko-max-123.github.io/test/" target="_blank" rel="noopener noreferrer">
+                                サイトを見る
+                                <span class="material-symbols-outlined text-base">open_in_new</span>
+                            </a>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="mb-4 flex items-center gap-3">
+                                <span class="material-symbols-outlined rounded-xl bg-[var(--primary-color)]/10 p-3 text-[var(--primary-color)]">view_in_ar</span>
+                                <p class="text-sm font-medium text-[var(--text-secondary)]">Research App</p>
                             </div>
-                        </div>
+                            <h2 class="mb-3 text-2xl font-bold">3D CAPTCHA 実験</h2>
+                            <p class="mb-5 text-sm leading-relaxed text-[var(--text-secondary)]">
+                                スマートフォン上で3D CAPTCHAを操作してもらい、認証結果や所要時間、アンケート結果を研究分析に活用するための実験用ページです。
+                            </p>
+                            <div class="mb-6 flex flex-wrap gap-2">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">3D</span>
+                                <span class="tag">User Test</span>
+                            </div>
+                            <a class="inline-flex items-center gap-2 rounded-full bg-[var(--primary-color)] px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90" href="https://ko-max-123.github.io/3d-cha-model/" target="_blank" rel="noopener noreferrer">
+                                サイトを見る
+                                <span class="material-symbols-outlined text-base">open_in_new</span>
+                            </a>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="mb-4 flex items-center gap-3">
+                                <span class="material-symbols-outlined rounded-xl bg-[var(--primary-color)]/10 p-3 text-[var(--primary-color)]">face</span>
+                                <p class="text-sm font-medium text-[var(--text-secondary)]">Web App</p>
+                            </div>
+                            <h2 class="mb-3 text-2xl font-bold">Face Habit Viewer</h2>
+                            <p class="mb-5 text-sm leading-relaxed text-[var(--text-secondary)]">
+                                表情や顔まわりの状態を確認するためのWebアプリです。ブラウザ上で手軽に確認できるツールとして公開しています。
+                            </p>
+                            <div class="mb-6 flex flex-wrap gap-2">
+                                <span class="tag">Web App</span>
+                                <span class="tag">Cloudflare Pages</span>
+                                <span class="tag">UI</span>
+                            </div>
+                            <a class="inline-flex items-center gap-2 rounded-full bg-[var(--primary-color)] px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90" href="https://kaokensyo.pages.dev/" target="_blank" rel="noopener noreferrer">
+                                サイトを見る
+                                <span class="material-symbols-outlined text-base">open_in_new</span>
+                            </a>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="mb-4 flex items-center gap-3">
+                                <span class="material-symbols-outlined rounded-xl bg-[var(--primary-color)]/10 p-3 text-[var(--primary-color)]">event</span>
+                                <p class="text-sm font-medium text-[var(--text-secondary)]">Event Site</p>
+                            </div>
+                            <h2 class="mb-3 text-2xl font-bold">FFTPRS ワークショップサイト</h2>
+                            <p class="mb-5 text-sm leading-relaxed text-[var(--text-secondary)]">
+                                有限体理論と擬似乱数系列生成への応用に関するワークショップの情報を掲載するWebサイトです。
+                            </p>
+                            <div class="mb-6 flex flex-wrap gap-2">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">Workshop</span>
+                            </div>
+                            <a class="inline-flex items-center gap-2 rounded-full bg-[var(--primary-color)] px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90" href="https://fftprs.github.io/WS/" target="_blank" rel="noopener noreferrer">
+                                サイトを見る
+                                <span class="material-symbols-outlined text-base">open_in_new</span>
+                            </a>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="mb-4 flex items-center gap-3">
+                                <span class="material-symbols-outlined rounded-xl bg-[var(--primary-color)]/10 p-3 text-[var(--primary-color)]">groups</span>
+                                <p class="text-sm font-medium text-[var(--text-secondary)]">Planning / Web</p>
+                            </div>
+                            <h2 class="mb-3 text-2xl font-bold">発表練習サークル 企画ページ</h2>
+                            <p class="mb-5 text-sm leading-relaxed text-[var(--text-secondary)]">
+                                就労移行支援施設で、利用者が安心して人前で話す経験を積むための活動案・運営計画・発表ガイドラインをまとめたページです。
+                            </p>
+                            <div class="mb-6 flex flex-wrap gap-2">
+                                <span class="tag">企画</span>
+                                <span class="tag">ドキュメント</span>
+                                <span class="tag">GitHub Pages</span>
+                            </div>
+                            <a class="inline-flex items-center gap-2 rounded-full bg-[var(--primary-color)] px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90" href="https://ko-max-123.github.io/club/" target="_blank" rel="noopener noreferrer">
+                                サイトを見る
+                                <span class="material-symbols-outlined text-base">open_in_new</span>
+                            </a>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="mb-4 flex items-center gap-3">
+                                <span class="material-symbols-outlined rounded-xl bg-[var(--primary-color)]/10 p-3 text-[var(--primary-color)]">terminal</span>
+                                <p class="text-sm font-medium text-[var(--text-secondary)]">GitHub Repository</p>
+                            </div>
+                            <h2 class="mb-3 text-2xl font-bold">learning</h2>
+                            <p class="mb-5 text-sm leading-relaxed text-[var(--text-secondary)]">
+                                Pythonを中心に、株価情報取得、OCR、音声処理、Webスクレイピングなどの学習・検証用コードをまとめたリポジトリです。
+                            </p>
+                            <div class="mb-6 flex flex-wrap gap-2">
+                                <span class="tag">Python</span>
+                                <span class="tag">Automation</span>
+                                <span class="tag">Learning</span>
+                            </div>
+                            <a class="inline-flex items-center gap-2 rounded-full bg-[var(--primary-color)] px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90" href="https://github.com/ko-max-123/learning" target="_blank" rel="noopener noreferrer">
+                                GitHubを見る
+                                <span class="material-symbols-outlined text-base">open_in_new</span>
+                            </a>
+                        </article>
+
+                        <article class="project-card md:col-span-2 xl:col-span-3">
+                            <div class="mb-4 flex items-center gap-3">
+                                <span class="material-symbols-outlined rounded-xl bg-[var(--primary-color)]/10 p-3 text-[var(--primary-color)]">apps</span>
+                                <p class="text-sm font-medium text-[var(--text-secondary)]">Desktop Tool</p>
+                            </div>
+                            <h2 class="mb-3 text-2xl font-bold">Arktools - アークナイツ 募集条件解析ツール</h2>
+                            <p class="mb-5 max-w-4xl text-sm leading-relaxed text-[var(--text-secondary)]">
+                                アークナイツの募集画面をキャプチャし、テンプレートマッチングによりタグを認識・解析するデスクトップ向けツールです。ElectronとPythonを組み合わせ、画像処理・OCR・埋め込みPython環境の検証にも取り組んでいます。
+                            </p>
+                            <div class="mb-6 flex flex-wrap gap-2">
+                                <span class="tag">Electron</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">OpenCV</span>
+                                <span class="tag">OCR</span>
+                            </div>
+                            <a class="inline-flex items-center gap-2 rounded-full bg-[var(--primary-color)] px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90" href="https://github.com/ko-max-123/ark_tools" target="_blank" rel="noopener noreferrer">
+                                GitHubを見る
+                                <span class="material-symbols-outlined text-base">open_in_new</span>
+                            </a>
+                        </article>
                     </div>
                 </div>
-                -->
             </main>
-            <footer class="border-t border-[var(--secondary-color)] bg-[var(--accent-color)]">
-                <div class="container mx-auto flex flex-col items-center justify-between gap-3 px-4 py-6 text-sm text-[var(--text-secondary)] sm:flex-row sm:px-6 lg:px-8">
-                    <p>© 2026 Tetsuyuki Koyama. All rights reserved.</p>
-                    <div class="flex items-center gap-5">
-                        <a class="transition-colors hover:text-[var(--primary-color)]" href="mailto:mini.mountain1990@gmail.com">Email</a>
-                        <a class="transition-colors hover:text-[var(--primary-color)]" href="https://github.com/ko-max-123">GitHub</a>
-                        <a class="transition-colors hover:text-[var(--primary-color)]" href="https://www.linkedin.com/in/%E5%93%B2%E4%B9%8B-%E5%B0%8F%E5%B1%B1-21531b6b/">LinkedIn</a>
-                    </div>
-                </div>
-            </footer>
         </div>
+        <footer class="border-t border-[var(--secondary-color)] bg-[var(--accent-color)]">
+            <div class="container mx-auto flex flex-col items-center justify-between gap-3 px-4 py-6 text-sm text-[var(--text-secondary)] sm:flex-row sm:px-6 lg:px-8">
+                <p>© 2026 Tetsuyuki Koyama. All rights reserved.</p>
+                <div class="flex items-center gap-5">
+                    <a class="transition-colors hover:text-[var(--primary-color)]" href="mailto:mini.mountain1990@gmail.com">Email</a>
+                    <a class="transition-colors hover:text-[var(--primary-color)]" href="https://github.com/ko-max-123">GitHub</a>
+                    <a class="transition-colors hover:text-[var(--primary-color)]" href="https://www.linkedin.com/in/%E5%93%B2%E4%B9%8B-%E5%B0%8F%E5%B1%B1-21531b6b/">LinkedIn</a>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 
