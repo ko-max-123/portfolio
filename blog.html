@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -41,9 +41,9 @@
 <body class="bg-[var(--background-color)]">
     <div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
         <div class="flex-grow">
-            <header class="sticky top-0 z-20 border-b border-[var(--secondary-color)] bg-[var(--background-color)]/85 backdrop-blur-lg">
-                <div class="container mx-auto flex flex-wrap items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-                    <a class="flex items-center gap-4 transition-colors hover:text-[var(--primary-color)]" href="./index.html" aria-label="TechFolio Home">
+            <header class="sticky top-0 z-20 border-b border-[var(--secondary-color)] bg-[var(--background-color)]/80 backdrop-blur-lg">
+                <div class="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+                    <div class="flex items-center gap-4">
                         <div class="text-[var(--primary-color)]">
                             <svg class="lucide lucide-code-xml" fill="none" height="28" stroke="currentColor" stroke-linecap="round"
                                 stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="28"
@@ -54,20 +54,23 @@
                             </svg>
                         </div>
                         <h2 class="text-xl font-bold tracking-tight">TechFolio</h2>
-                    </a>
+                    </div>
                     <nav class="hidden items-center gap-8 md:flex">
-                        <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="./index.html">ホーム</a>
-                        <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="./career.html">経歴</a>
-                        <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="./projects.html">プロジェクト</a>
-                        <a class="text-sm font-medium text-[var(--primary-color)]" href="./blog.html">ブログ</a>
+                        <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+                            href="./index.html">ホーム</a>
+                        <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+                            href="./career.html">経歴</a>
+                        <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+                            href="./projects.html">プロジェクト</a>
                     </nav>
-                    <div class="h-10 w-10 rounded-full bg-cover bg-center" style='background-image: url("./images/profile.jpg");'></div>
-                    <nav class="mt-4 grid w-full grid-cols-4 gap-2 border-t border-[var(--secondary-color)] pt-3 md:hidden">
-                        <a class="rounded-md px-2 py-2 text-center text-xs font-medium text-[var(--text-secondary)] transition-colors hover:bg-[var(--secondary-color)] hover:text-[var(--primary-color)]" href="./index.html">ホーム</a>
-                        <a class="rounded-md px-2 py-2 text-center text-xs font-medium text-[var(--text-secondary)] transition-colors hover:bg-[var(--secondary-color)] hover:text-[var(--primary-color)]" href="./career.html">経歴</a>
-                        <a class="rounded-md px-2 py-2 text-center text-xs font-medium text-[var(--text-secondary)] transition-colors hover:bg-[var(--secondary-color)] hover:text-[var(--primary-color)]" href="./projects.html">プロジェクト</a>
-                        <a class="rounded-md bg-[var(--secondary-color)] px-2 py-2 text-center text-xs font-medium text-[var(--primary-color)]" href="./blog.html">ブログ</a>
-                    </nav>
+                    <div class="flex items-center gap-4">
+                        <div class="h-10 w-10 rounded-full bg-cover bg-center"
+                            style='background-image: url("./images/profile.jpg");'>
+                        </div>
+                        <button class="md:hidden">
+                            <span class="material-symbols-outlined"> menu </span>
+                        </button>
+                    </div>
                 </div>
             </header>
             <main class="flex-1">
@@ -176,7 +179,7 @@
         </div>
         <footer class="border-t border-[var(--secondary-color)] bg-[var(--accent-color)]">
             <div class="container mx-auto flex flex-col items-center justify-between gap-3 px-4 py-6 text-sm text-[var(--text-secondary)] sm:flex-row sm:px-6 lg:px-8">
-                <p>&copy; 2026 Tetsuyuki Koyama. All rights reserved.</p>
+                <p>© 2026 Tetsuyuki Koyama. All rights reserved.</p>
                 <div class="flex items-center gap-5">
                     <a class="transition-colors hover:text-[var(--primary-color)]" href="mailto:mini.mountain1990@gmail.com">Email</a>
                     <a class="transition-colors hover:text-[var(--primary-color)]" href="https://github.com/ko-max-123">GitHub</a>
@@ -186,6 +189,4 @@
         </footer>
     </div>
 </body>
-
 </html>
-
