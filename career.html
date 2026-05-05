@@ -1,7 +1,9 @@
-<html>
+﻿<!DOCTYPE html>
+<html lang="ja">
 
 <head>
 	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<link href="https://fonts.googleapis.com" rel="preconnect" />
 	<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
 	<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap"
@@ -36,55 +38,48 @@
         display: none;
       }
     </style>
-	<title>Stitch Design</title>
+	<title>TechFolio - Career</title>
 	<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
 </head>
 
 <body class="bg-[var(--background-color)] text-[var(--text-primary)]">
 	<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
 		<div class="flex-grow">
-			<header
-				class="sticky top-0 z-20 border-b border-[var(--secondary-color)] bg-[var(--background-color)]/80 backdrop-blur-lg">
-				<div class="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-					<div class="flex items-center gap-4">
-						<div class="text-[var(--primary-color)]">
-							<svg class="lucide lucide-code-xml" fill="none" height="28" stroke="currentColor"
-								stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
-								width="28" xmlns="http://www.w3.org/2000/svg">
-								<path d="m18 16 4-4-4-4"></path>
-								<path d="m6 8-4 4 4 4"></path>
-								<path d="m14.5 4-5 16"></path>
-							</svg>
-						</div>
-						<h2 class="text-xl font-bold tracking-tight">TechFolio</h2>
-					</div>
-					<nav class="hidden items-center gap-8 md:flex">
-						<a class="text-sm font-medium text-[var(--primary-color)]" href="./index.html">ホーム</a>
-						<a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
-							href="./career.html">経歴</a>
-						<!--	
-						<a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
-							href="./projects.html">プロジェクト</a>
-						<a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
-							href="./blog.html">ブログ</a>
-							-->
-					</nav>
-					<div class="flex items-center gap-4">
-						<div class="h-10 w-10 rounded-full bg-cover bg-center"
-							style='background-image: url("./images/profile.jpg");'>
-						</div>
-						<button class="md:hidden">
-							<span class="material-symbols-outlined"> menu </span>
-						</button>
-					</div>
-				</div>
-			</header>
+            <header class="sticky top-0 z-20 border-b border-[var(--secondary-color)] bg-[var(--background-color)]/85 backdrop-blur-lg">
+                <div class="container mx-auto flex flex-wrap items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+                    <a class="flex items-center gap-4 transition-colors hover:text-[var(--primary-color)]" href="./index.html" aria-label="TechFolio Home">
+                        <div class="text-[var(--primary-color)]">
+                            <svg class="lucide lucide-code-xml" fill="none" height="28" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="28"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="m18 16 4-4-4-4"></path>
+                                <path d="m6 8-4 4 4 4"></path>
+                                <path d="m14.5 4-5 16"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-xl font-bold tracking-tight">TechFolio</h2>
+                    </a>
+                    <nav class="hidden items-center gap-8 md:flex">
+                        <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="./index.html">ホーム</a>
+                        <a class="text-sm font-medium text-[var(--primary-color)]" href="./career.html">経歴</a>
+                        <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="./projects.html">プロジェクト</a>
+                        <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="./blog.html">ブログ</a>
+                    </nav>
+                    <div class="h-10 w-10 rounded-full bg-cover bg-center" style='background-image: url("./images/profile.jpg");'></div>
+                    <nav class="mt-4 grid w-full grid-cols-4 gap-2 border-t border-[var(--secondary-color)] pt-3 md:hidden">
+                        <a class="rounded-md px-2 py-2 text-center text-xs font-medium text-[var(--text-secondary)] transition-colors hover:bg-[var(--secondary-color)] hover:text-[var(--primary-color)]" href="./index.html">ホーム</a>
+                        <a class="rounded-md bg-[var(--secondary-color)] px-2 py-2 text-center text-xs font-medium text-[var(--primary-color)]" href="./career.html">経歴</a>
+                        <a class="rounded-md px-2 py-2 text-center text-xs font-medium text-[var(--text-secondary)] transition-colors hover:bg-[var(--secondary-color)] hover:text-[var(--primary-color)]" href="./projects.html">プロジェクト</a>
+                        <a class="rounded-md px-2 py-2 text-center text-xs font-medium text-[var(--text-secondary)] transition-colors hover:bg-[var(--secondary-color)] hover:text-[var(--primary-color)]" href="./blog.html">ブログ</a>
+                    </nav>
+                </div>
+            </header>
 			<main class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
 				<div class="mx-auto max-w-4xl">
-					<h1 class="mb-12 text-center text-4xl font-bold tracking-tighter sm:text-5xl">経歴</h1>
+					<h1 class="mb-12 text-center text-4xl font-bold tracking-tighter sm:text-5xl">邨梧ｭｴ</h1>
 					<div class="space-y-16">
 						<section>
-							<h2 class="mb-8 text-3xl font-bold tracking-tight text-[var(--primary-color)]">職務経歴</h2>
+							<h2 class="mb-8 text-3xl font-bold tracking-tight text-[var(--primary-color)]">閨ｷ蜍咏ｵ梧ｭｴ</h2>
 							<div class="relative flex flex-col gap-8">
 								<div class="timeline-item flex gap-6">
 									<div
@@ -94,9 +89,9 @@
 									</div>
 									<div
 										class="flex-1 rounded-lg border border-[var(--secondary-color)] bg-[var(--accent-color)] p-6 transition-shadow hover:shadow-lg hover:shadow-[var(--primary-color)]/10">
-										<h3 class="text-xl font-semibold">フリーランス</h3>
-										<p class="mb-3 text-sm text-[var(--text-secondary)]">2025年5月 - 現在</p>
-										<p class="text-[var(--text-secondary)]">Webサイト制作や小規模な業務システムの開発を請け負っています</p>
+										<h3 class="text-xl font-semibold">繝輔Μ繝ｼ繝ｩ繝ｳ繧ｹ</h3>
+										<p class="mb-3 text-sm text-[var(--text-secondary)]">2025蟷ｴ5譛・- 迴ｾ蝨ｨ</p>
+										<p class="text-[var(--text-secondary)]">Web繧ｵ繧､繝亥宛菴懊ｄ蟆剰ｦ乗ｨ｡縺ｪ讌ｭ蜍吶す繧ｹ繝・Β縺ｮ髢狗匱繧定ｫ九￠雋縺｣縺ｦ縺・∪縺・/p>
 									</div>
 								</div>
 								<div class="timeline-item flex gap-6">
@@ -107,9 +102,9 @@
 									</div>
 									<div
 										class="flex-1 rounded-lg border border-[var(--secondary-color)] bg-[var(--accent-color)] p-6 transition-shadow hover:shadow-lg hover:shadow-[var(--primary-color)]/10">
-										<h3 class="text-xl font-semibold">大手独立ベンダー企業</h3>
-										<p class="mb-3 text-sm text-[var(--text-secondary)]">2020年2月 - 2024年8月</p>
-										<p class="text-[var(--text-secondary)]">Webアプリケーションのバックエンド開発やタブレットアプリ開発のチームリーダーとしてプロジェクトの進捗管理とメンバーの技術指導も行う。</p>
+										<h3 class="text-xl font-semibold">螟ｧ謇狗峡遶九・繝ｳ繝繝ｼ莨∵･ｭ</h3>
+										<p class="mb-3 text-sm text-[var(--text-secondary)]">2020蟷ｴ2譛・- 2024蟷ｴ8譛・/p>
+										<p class="text-[var(--text-secondary)]">Web繧｢繝励Μ繧ｱ繝ｼ繧ｷ繝ｧ繝ｳ縺ｮ繝舌ャ繧ｯ繧ｨ繝ｳ繝蛾幕逋ｺ繧・ち繝悶Ξ繝・ヨ繧｢繝励Μ髢狗匱縺ｮ繝√・繝繝ｪ繝ｼ繝繝ｼ縺ｨ縺励※繝励Ο繧ｸ繧ｧ繧ｯ繝医・騾ｲ謐礼ｮ｡逅・→繝｡繝ｳ繝舌・縺ｮ謚陦捺欠蟆弱ｂ陦後≧縲・/p>
 									</div>
 								</div>
 								<div class="timeline-item flex gap-6">
@@ -120,18 +115,16 @@
 									</div>
 									<div
 										class="flex-1 rounded-lg border border-[var(--secondary-color)] bg-[var(--accent-color)] p-6 transition-shadow hover:shadow-lg hover:shadow-[var(--primary-color)]/10">
-										<h3 class="text-xl font-semibold">Web開発企業</h3>
-										<p class="mb-3 text-sm text-[var(--text-secondary)]">2015年4月 - 2020年2月</p>
-										<p class="text-[var(--text-secondary)]">CMS導入支援、Webページ制作、Webシステムの開発など、HTML、CSS、JavaScript、PHP、WordPress、Java、MySQLなどを使用。
-											また、チームリーダーなど幅広い経験を積んだ。
-
+										<h3 class="text-xl font-semibold">Web髢狗匱莨∵･ｭ</h3>
+										<p class="mb-3 text-sm text-[var(--text-secondary)]">2015蟷ｴ4譛・- 2020蟷ｴ2譛・/p>
+										<p class="text-[var(--text-secondary)]">CMS蟆主・謾ｯ謠ｴ縲仝eb繝壹・繧ｸ蛻ｶ菴懊仝eb繧ｷ繧ｹ繝・Β縺ｮ髢狗匱縺ｪ縺ｩ縲？TML縲，SS縲゛avaScript縲￣HP縲仝ordPress縲゛ava縲｀ySQL縺ｪ縺ｩ繧剃ｽｿ逕ｨ縲・											縺ｾ縺溘√メ繝ｼ繝繝ｪ繝ｼ繝繝ｼ縺ｪ縺ｩ蟷・ｺ・＞邨碁ｨ薙ｒ遨阪ｓ縺縲・
 										</p>
 									</div>
 								</div>
 							</div>
 						</section>
 						<section>
-							<h2 class="mb-8 text-3xl font-bold tracking-tight text-[var(--primary-color)]">学歴</h2>
+							<h2 class="mb-8 text-3xl font-bold tracking-tight text-[var(--primary-color)]">蟄ｦ豁ｴ</h2>
 							<div class="relative flex flex-col gap-8">
 								<div class="timeline-item flex gap-6">
 									<div
@@ -141,9 +134,9 @@
 									</div>
 									<div
 										class="flex-1 rounded-lg border border-[var(--secondary-color)] bg-[var(--accent-color)] p-6 transition-shadow hover:shadow-lg hover:shadow-[var(--primary-color)]/10">
-										<h3 class="text-xl font-semibold">北九州市立大学大学院 情報工学専攻</h3>
-										<p class="mb-3 text-sm text-[var(--text-secondary)]">2013年4月 - 2015年3月</p>
-										<p class="text-[var(--text-secondary)]">情報工学専攻を卒業。</p>
+										<h3 class="text-xl font-semibold">蛹嶺ｹ晏ｷ槫ｸらｫ句､ｧ蟄ｦ螟ｧ蟄ｦ髯｢ 諠・ｱ蟾･蟄ｦ蟆よ判</h3>
+										<p class="mb-3 text-sm text-[var(--text-secondary)]">2013蟷ｴ4譛・- 2015蟷ｴ3譛・/p>
+										<p class="text-[var(--text-secondary)]">諠・ｱ蟾･蟄ｦ蟆よ判繧貞穀讌ｭ縲・/p>
 									</div>
 								</div>
 								<div class="timeline-item flex gap-6">
@@ -154,9 +147,9 @@
 									</div>
 									<div
 										class="flex-1 rounded-lg border border-[var(--secondary-color)] bg-[var(--accent-color)] p-6 transition-shadow hover:shadow-lg hover:shadow-[var(--primary-color)]/10">
-										<h3 class="text-xl font-semibold">北九州市立大学 情報メディア工学科</h3>
-										<p class="mb-3 text-sm text-[var(--text-secondary)]">2009年4月 - 2013年3月</p>
-										<p class="text-[var(--text-secondary)]">情報メディア工学科を卒業。</p>
+										<h3 class="text-xl font-semibold">蛹嶺ｹ晏ｷ槫ｸらｫ句､ｧ蟄ｦ 諠・ｱ繝｡繝・ぅ繧｢蟾･蟄ｦ遘・/h3>
+										<p class="mb-3 text-sm text-[var(--text-secondary)]">2009蟷ｴ4譛・- 2013蟷ｴ3譛・/p>
+										<p class="text-[var(--text-secondary)]">諠・ｱ繝｡繝・ぅ繧｢蟾･蟄ｦ遘代ｒ蜊呈･ｭ縲・/p>
 									</div>
 								</div>
 							</div>
@@ -165,12 +158,18 @@
 				</div>
 			</main>
 		</div>
-		<footer class="border-t border-[var(--secondary-color)] bg-[var(--accent-color)]">
-			<div class="container mx-auto px-4 py-6 text-center text-sm text-[var(--text-secondary)] sm:px-6 lg:px-8">
-				<p>© 2024 TechFolio. All Rights Reserved.</p>
-			</div>
-		</footer>
-	</div>
+        <footer class="border-t border-[var(--secondary-color)] bg-[var(--accent-color)]">
+            <div class="container mx-auto flex flex-col items-center justify-between gap-3 px-4 py-6 text-sm text-[var(--text-secondary)] sm:flex-row sm:px-6 lg:px-8">
+                <p>&copy; 2026 Tetsuyuki Koyama. All rights reserved.</p>
+                <div class="flex items-center gap-5">
+                    <a class="transition-colors hover:text-[var(--primary-color)]" href="mailto:mini.mountain1990@gmail.com">Email</a>
+                    <a class="transition-colors hover:text-[var(--primary-color)]" href="https://github.com/ko-max-123">GitHub</a>
+                    <a class="transition-colors hover:text-[var(--primary-color)]" href="https://www.linkedin.com/in/%E5%93%B2%E4%B9%8B-%E5%B0%8F%E5%B1%B1-21531b6b/">LinkedIn</a>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>
+
