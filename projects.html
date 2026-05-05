@@ -4,13 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Tetsuyuki Koyama - 制作・研究プロジェクト</title>
+    <title>Tetsuyuki Koyama - 制作・プロジェクト</title>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <style type="text/tailwindcss">
+    <style>
         :root {
             --primary-color: #3b82f6;
             --secondary-color: #1e293b;
@@ -21,213 +20,471 @@
             --card-bg-color: #1f2937;
             --border-color: #374151;
         }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Spline Sans', sans-serif;
-            background-color: var(--background-color);
+            margin: 0;
+            font-family: 'Spline Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--background-color);
             color: var(--text-primary);
+            line-height: 1.7;
         }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            width: min(1120px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            border-bottom: 1px solid var(--secondary-color);
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(16px);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 16px 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .brand svg {
+            color: var(--primary-color);
+            flex: 0 0 auto;
+        }
+
+        .site-nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .site-nav a {
+            color: var(--text-secondary);
+            transition: color 0.2s ease;
+        }
+
+        .site-nav a:hover,
+        .site-nav a.active {
+            color: var(--primary-color);
+        }
+
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 999px;
+            background-image: url('./images/profile.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        main {
+            flex: 1;
+            padding: 56px 0 72px;
+        }
+
+        .page-title {
+            margin: 0 auto 48px;
+            max-width: 820px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            margin: 0 0 12px;
+            color: var(--primary-color);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(36px, 6vw, 56px);
+            line-height: 1.12;
+            letter-spacing: -0.05em;
+        }
+
+        .lead {
+            margin: 18px auto 0;
+            max-width: 760px;
+            color: var(--text-secondary);
+            font-size: 18px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
         .project-card {
-            @apply rounded-2xl border border-[var(--border-color)] bg-[var(--card-bg-color)] p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-[var(--primary-color)] hover:shadow-2xl hover:shadow-[var(--primary-color)]/10;
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            padding: 24px;
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            background: var(--card-bg-color);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
         }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary-color);
+            box-shadow: 0 24px 60px rgba(59, 130, 246, 0.12);
+        }
+
+        .project-card.wide {
+            grid-column: span 3;
+        }
+
+        .project-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .project-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: rgba(59, 130, 246, 0.12);
+            color: var(--primary-color);
+        }
+
+        .project-type {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .project-card h2 {
+            margin: 0 0 12px;
+            font-size: 23px;
+            line-height: 1.35;
+            letter-spacing: -0.03em;
+        }
+
+        .project-card p.description {
+            margin: 0 0 20px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .project-card.wide p.description {
+            max-width: 860px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: auto 0 24px;
+        }
+
         .tag {
-            @apply rounded-full bg-[var(--border-color)] px-3 py-1 text-xs font-semibold text-gray-300;
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            background: var(--border-color);
+            color: #d1d5db;
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: fit-content;
+            border-radius: 999px;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .project-link:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .site-footer {
+            border-top: 1px solid var(--secondary-color);
+            background: var(--accent-color);
+        }
+
+        .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 24px 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 900px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .project-card.wide {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .site-nav {
+                display: none;
+            }
+
+            .container {
+                width: min(100% - 24px, 1120px);
+            }
+
+            main {
+                padding-top: 40px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card.wide {
+                grid-column: span 1;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
 
-<body class="bg-[var(--background-color)] text-[var(--text-primary)]">
-    <div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
-        <div class="flex-grow">
-            <header class="sticky top-0 z-20 border-b border-[var(--secondary-color)] bg-[var(--background-color)]/80 backdrop-blur-lg">
-                <div class="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-                    <div class="flex items-center gap-4">
-                        <div class="text-[var(--primary-color)]">
-                            <svg class="lucide lucide-code-xml" fill="none" height="28" stroke="currentColor" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="28"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="m18 16 4-4-4-4"></path>
-                                <path d="m6 8-4 4 4 4"></path>
-                                <path d="m14.5 4-5 16"></path>
-                            </svg>
+<body>
+    <div class="page">
+        <header class="site-header">
+            <div class="container header-inner">
+                <a class="brand" href="./index.html" aria-label="ホームへ戻る">
+                    <svg class="lucide lucide-code-xml" fill="none" height="28" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="28"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="m18 16 4-4-4-4"></path>
+                        <path d="m6 8-4 4 4 4"></path>
+                        <path d="m14.5 4-5 16"></path>
+                    </svg>
+                    <span>TechFolio</span>
+                </a>
+                <nav class="site-nav" aria-label="メインナビゲーション">
+                    <a href="./index.html">ホーム</a>
+                    <a href="./career.html">経歴</a>
+                    <a class="active" href="./projects.html">制作・プロジェクト</a>
+                </nav>
+                <div class="profile-icon" aria-hidden="true"></div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <section class="page-title">
+                    <p class="eyebrow">Works / Projects</p>
+                    <h1>制作・プロジェクト</h1>
+                    <p class="lead">
+                        Webサイト制作、研究支援、実験用アプリ、業務効率化ツールなど、これまでに作成・公開した成果物をまとめています。
+                    </p>
+                </section>
+
+                <section class="projects-grid" aria-label="制作・プロジェクト一覧">
+                    <article class="project-card">
+                        <div class="project-meta">
+                            <span class="material-symbols-outlined project-icon">science</span>
+                            <p class="project-type">Web Site</p>
                         </div>
-                        <h2 class="text-xl font-bold tracking-tight">TechFolio</h2>
-                    </div>
-                    <nav class="hidden items-center gap-8 md:flex">
-                        <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="./index.html">ホーム</a>
-                        <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="./career.html">経歴</a>
-                        <a class="text-sm font-medium text-[var(--primary-color)]" href="./projects.html">制作・研究</a>
-                    </nav>
-                    <div class="flex items-center gap-4">
-                        <div class="h-10 w-10 rounded-full bg-cover bg-center" style='background-image: url("./images/profile.jpg");'></div>
-                        <button class="md:hidden">
-                            <span class="material-symbols-outlined"> menu </span>
-                        </button>
-                    </div>
-                </div>
-            </header>
+                        <h2>上原研究室 Webサイト</h2>
+                        <p class="description">研究室の概要、研究業績、ニュース、メンバー情報などを整理した研究室向けWebサイトです。</p>
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">GitHub Pages</span>
+                        </div>
+                        <a class="project-link" href="https://ko-max-123.github.io/test/" target="_blank" rel="noopener noreferrer">
+                            サイトを見る
+                            <span class="material-symbols-outlined">open_in_new</span>
+                        </a>
+                    </article>
 
-            <main class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
-                <div class="mx-auto max-w-6xl">
-                    <div class="mb-12 text-center">
-                        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-[var(--primary-color)]">Works / Research</p>
-                        <h1 class="text-4xl font-bold tracking-tighter text-white md:text-5xl">制作・研究プロジェクト</h1>
-                        <p class="mx-auto mt-4 max-w-3xl text-lg leading-relaxed text-[var(--text-secondary)]">
-                            Webサイト制作、研究支援、実験用アプリ、業務効率化ツールなど、これまでに作成・公開した成果物をまとめています。
-                        </p>
-                    </div>
+                    <article class="project-card">
+                        <div class="project-meta">
+                            <span class="material-symbols-outlined project-icon">view_in_ar</span>
+                            <p class="project-type">Research App</p>
+                        </div>
+                        <h2>3D CAPTCHA 実験</h2>
+                        <p class="description">スマートフォン上で3D CAPTCHAを操作してもらい、認証結果や所要時間、アンケート結果を研究分析に活用するための実験用ページです。</p>
+                        <div class="tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">3D</span>
+                            <span class="tag">User Test</span>
+                        </div>
+                        <a class="project-link" href="https://ko-max-123.github.io/3d-cha-model/" target="_blank" rel="noopener noreferrer">
+                            サイトを見る
+                            <span class="material-symbols-outlined">open_in_new</span>
+                        </a>
+                    </article>
 
-                    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-                        <article class="project-card">
-                            <div class="mb-4 flex items-center gap-3">
-                                <span class="material-symbols-outlined rounded-xl bg-[var(--primary-color)]/10 p-3 text-[var(--primary-color)]">science</span>
-                                <p class="text-sm font-medium text-[var(--text-secondary)]">Web Site</p>
-                            </div>
-                            <h2 class="mb-3 text-2xl font-bold">上原研究室 Webサイト</h2>
-                            <p class="mb-5 text-sm leading-relaxed text-[var(--text-secondary)]">
-                                研究室の概要、研究業績、ニュース、メンバー情報などを整理した研究室向けWebサイトです。
-                            </p>
-                            <div class="mb-6 flex flex-wrap gap-2">
-                                <span class="tag">HTML</span>
-                                <span class="tag">CSS</span>
-                                <span class="tag">GitHub Pages</span>
-                            </div>
-                            <a class="inline-flex items-center gap-2 rounded-full bg-[var(--primary-color)] px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90" href="https://ko-max-123.github.io/test/" target="_blank" rel="noopener noreferrer">
-                                サイトを見る
-                                <span class="material-symbols-outlined text-base">open_in_new</span>
-                            </a>
-                        </article>
+                    <article class="project-card">
+                        <div class="project-meta">
+                            <span class="material-symbols-outlined project-icon">face</span>
+                            <p class="project-type">Web App</p>
+                        </div>
+                        <h2>Face Habit Viewer</h2>
+                        <p class="description">表情や顔まわりの状態を確認するためのWebアプリです。ブラウザ上で手軽に確認できるツールとして公開しています。</p>
+                        <div class="tags">
+                            <span class="tag">Web App</span>
+                            <span class="tag">Cloudflare Pages</span>
+                            <span class="tag">UI</span>
+                        </div>
+                        <a class="project-link" href="https://kaokensyo.pages.dev/" target="_blank" rel="noopener noreferrer">
+                            サイトを見る
+                            <span class="material-symbols-outlined">open_in_new</span>
+                        </a>
+                    </article>
 
-                        <article class="project-card">
-                            <div class="mb-4 flex items-center gap-3">
-                                <span class="material-symbols-outlined rounded-xl bg-[var(--primary-color)]/10 p-3 text-[var(--primary-color)]">view_in_ar</span>
-                                <p class="text-sm font-medium text-[var(--text-secondary)]">Research App</p>
-                            </div>
-                            <h2 class="mb-3 text-2xl font-bold">3D CAPTCHA 実験</h2>
-                            <p class="mb-5 text-sm leading-relaxed text-[var(--text-secondary)]">
-                                スマートフォン上で3D CAPTCHAを操作してもらい、認証結果や所要時間、アンケート結果を研究分析に活用するための実験用ページです。
-                            </p>
-                            <div class="mb-6 flex flex-wrap gap-2">
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">3D</span>
-                                <span class="tag">User Test</span>
-                            </div>
-                            <a class="inline-flex items-center gap-2 rounded-full bg-[var(--primary-color)] px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90" href="https://ko-max-123.github.io/3d-cha-model/" target="_blank" rel="noopener noreferrer">
-                                サイトを見る
-                                <span class="material-symbols-outlined text-base">open_in_new</span>
-                            </a>
-                        </article>
+                    <article class="project-card">
+                        <div class="project-meta">
+                            <span class="material-symbols-outlined project-icon">event</span>
+                            <p class="project-type">Event Site</p>
+                        </div>
+                        <h2>FFTPRS ワークショップサイト</h2>
+                        <p class="description">有限体理論と擬似乱数系列生成への応用に関するワークショップの情報を掲載するWebサイトです。</p>
+                        <div class="tags">
+                            <span class="tag">Workshop</span>
+                            <span class="tag">Static Site</span>
+                            <span class="tag">GitHub Pages</span>
+                        </div>
+                        <a class="project-link" href="https://fftprs.github.io/WS/" target="_blank" rel="noopener noreferrer">
+                            サイトを見る
+                            <span class="material-symbols-outlined">open_in_new</span>
+                        </a>
+                    </article>
 
-                        <article class="project-card">
-                            <div class="mb-4 flex items-center gap-3">
-                                <span class="material-symbols-outlined rounded-xl bg-[var(--primary-color)]/10 p-3 text-[var(--primary-color)]">face</span>
-                                <p class="text-sm font-medium text-[var(--text-secondary)]">Web App</p>
-                            </div>
-                            <h2 class="mb-3 text-2xl font-bold">Face Habit Viewer</h2>
-                            <p class="mb-5 text-sm leading-relaxed text-[var(--text-secondary)]">
-                                表情や顔まわりの状態を確認するためのWebアプリです。ブラウザ上で手軽に確認できるツールとして公開しています。
-                            </p>
-                            <div class="mb-6 flex flex-wrap gap-2">
-                                <span class="tag">Web App</span>
-                                <span class="tag">Cloudflare Pages</span>
-                                <span class="tag">UI</span>
-                            </div>
-                            <a class="inline-flex items-center gap-2 rounded-full bg-[var(--primary-color)] px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90" href="https://kaokensyo.pages.dev/" target="_blank" rel="noopener noreferrer">
-                                サイトを見る
-                                <span class="material-symbols-outlined text-base">open_in_new</span>
-                            </a>
-                        </article>
+                    <article class="project-card">
+                        <div class="project-meta">
+                            <span class="material-symbols-outlined project-icon">groups</span>
+                            <p class="project-type">Planning / Web</p>
+                        </div>
+                        <h2>発表練習サークル 企画ページ</h2>
+                        <p class="description">就労移行支援施設で、利用者が安心して人前で話す経験を積むための活動案・運営計画・発表ガイドラインをまとめたページです。</p>
+                        <div class="tags">
+                            <span class="tag">企画</span>
+                            <span class="tag">ドキュメント</span>
+                            <span class="tag">GitHub Pages</span>
+                        </div>
+                        <a class="project-link" href="https://ko-max-123.github.io/club/" target="_blank" rel="noopener noreferrer">
+                            サイトを見る
+                            <span class="material-symbols-outlined">open_in_new</span>
+                        </a>
+                    </article>
 
-                        <article class="project-card">
-                            <div class="mb-4 flex items-center gap-3">
-                                <span class="material-symbols-outlined rounded-xl bg-[var(--primary-color)]/10 p-3 text-[var(--primary-color)]">event</span>
-                                <p class="text-sm font-medium text-[var(--text-secondary)]">Event Site</p>
-                            </div>
-                            <h2 class="mb-3 text-2xl font-bold">FFTPRS ワークショップサイト</h2>
-                            <p class="mb-5 text-sm leading-relaxed text-[var(--text-secondary)]">
-                                有限体理論と擬似乱数系列生成への応用に関するワークショップの情報を掲載するWebサイトです。
-                            </p>
-                            <div class="mb-6 flex flex-wrap gap-2">
-                                <span class="tag">HTML</span>
-                                <span class="tag">CSS</span>
-                                <span class="tag">Workshop</span>
-                            </div>
-                            <a class="inline-flex items-center gap-2 rounded-full bg-[var(--primary-color)] px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90" href="https://fftprs.github.io/WS/" target="_blank" rel="noopener noreferrer">
-                                サイトを見る
-                                <span class="material-symbols-outlined text-base">open_in_new</span>
-                            </a>
-                        </article>
+                    <article class="project-card">
+                        <div class="project-meta">
+                            <span class="material-symbols-outlined project-icon">terminal</span>
+                            <p class="project-type">GitHub Repository</p>
+                        </div>
+                        <h2>learning</h2>
+                        <p class="description">Pythonを中心に、株価情報取得、OCR、音声処理、Webスクレイピングなどの学習・検証用コードをまとめたリポジトリです。</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">Learning</span>
+                        </div>
+                        <a class="project-link" href="https://github.com/ko-max-123/learning" target="_blank" rel="noopener noreferrer">
+                            GitHubを見る
+                            <span class="material-symbols-outlined">open_in_new</span>
+                        </a>
+                    </article>
 
-                        <article class="project-card">
-                            <div class="mb-4 flex items-center gap-3">
-                                <span class="material-symbols-outlined rounded-xl bg-[var(--primary-color)]/10 p-3 text-[var(--primary-color)]">groups</span>
-                                <p class="text-sm font-medium text-[var(--text-secondary)]">Planning / Web</p>
-                            </div>
-                            <h2 class="mb-3 text-2xl font-bold">発表練習サークル 企画ページ</h2>
-                            <p class="mb-5 text-sm leading-relaxed text-[var(--text-secondary)]">
-                                就労移行支援施設で、利用者が安心して人前で話す経験を積むための活動案・運営計画・発表ガイドラインをまとめたページです。
-                            </p>
-                            <div class="mb-6 flex flex-wrap gap-2">
-                                <span class="tag">企画</span>
-                                <span class="tag">ドキュメント</span>
-                                <span class="tag">GitHub Pages</span>
-                            </div>
-                            <a class="inline-flex items-center gap-2 rounded-full bg-[var(--primary-color)] px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90" href="https://ko-max-123.github.io/club/" target="_blank" rel="noopener noreferrer">
-                                サイトを見る
-                                <span class="material-symbols-outlined text-base">open_in_new</span>
-                            </a>
-                        </article>
+                    <article class="project-card wide">
+                        <div class="project-meta">
+                            <span class="material-symbols-outlined project-icon">apps</span>
+                            <p class="project-type">Desktop Tool</p>
+                        </div>
+                        <h2>Arktools - アークナイツ 募集条件解析ツール</h2>
+                        <p class="description">アークナイツの募集画面をキャプチャし、テンプレートマッチングによりタグを認識・解析するデスクトップ向けツールです。ElectronとPythonを組み合わせ、画像処理・OCR・埋め込みPython環境の検証にも取り組んでいます。</p>
+                        <div class="tags">
+                            <span class="tag">Electron</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">OCR</span>
+                        </div>
+                        <a class="project-link" href="https://github.com/ko-max-123/ark_tools" target="_blank" rel="noopener noreferrer">
+                            GitHubを見る
+                            <span class="material-symbols-outlined">open_in_new</span>
+                        </a>
+                    </article>
+                </section>
+            </div>
+        </main>
 
-                        <article class="project-card">
-                            <div class="mb-4 flex items-center gap-3">
-                                <span class="material-symbols-outlined rounded-xl bg-[var(--primary-color)]/10 p-3 text-[var(--primary-color)]">terminal</span>
-                                <p class="text-sm font-medium text-[var(--text-secondary)]">GitHub Repository</p>
-                            </div>
-                            <h2 class="mb-3 text-2xl font-bold">learning</h2>
-                            <p class="mb-5 text-sm leading-relaxed text-[var(--text-secondary)]">
-                                Pythonを中心に、株価情報取得、OCR、音声処理、Webスクレイピングなどの学習・検証用コードをまとめたリポジトリです。
-                            </p>
-                            <div class="mb-6 flex flex-wrap gap-2">
-                                <span class="tag">Python</span>
-                                <span class="tag">Automation</span>
-                                <span class="tag">Learning</span>
-                            </div>
-                            <a class="inline-flex items-center gap-2 rounded-full bg-[var(--primary-color)] px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90" href="https://github.com/ko-max-123/learning" target="_blank" rel="noopener noreferrer">
-                                GitHubを見る
-                                <span class="material-symbols-outlined text-base">open_in_new</span>
-                            </a>
-                        </article>
-
-                        <article class="project-card md:col-span-2 xl:col-span-3">
-                            <div class="mb-4 flex items-center gap-3">
-                                <span class="material-symbols-outlined rounded-xl bg-[var(--primary-color)]/10 p-3 text-[var(--primary-color)]">apps</span>
-                                <p class="text-sm font-medium text-[var(--text-secondary)]">Desktop Tool</p>
-                            </div>
-                            <h2 class="mb-3 text-2xl font-bold">Arktools - アークナイツ 募集条件解析ツール</h2>
-                            <p class="mb-5 max-w-4xl text-sm leading-relaxed text-[var(--text-secondary)]">
-                                アークナイツの募集画面をキャプチャし、テンプレートマッチングによりタグを認識・解析するデスクトップ向けツールです。ElectronとPythonを組み合わせ、画像処理・OCR・埋め込みPython環境の検証にも取り組んでいます。
-                            </p>
-                            <div class="mb-6 flex flex-wrap gap-2">
-                                <span class="tag">Electron</span>
-                                <span class="tag">Python</span>
-                                <span class="tag">OpenCV</span>
-                                <span class="tag">OCR</span>
-                            </div>
-                            <a class="inline-flex items-center gap-2 rounded-full bg-[var(--primary-color)] px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90" href="https://github.com/ko-max-123/ark_tools" target="_blank" rel="noopener noreferrer">
-                                GitHubを見る
-                                <span class="material-symbols-outlined text-base">open_in_new</span>
-                            </a>
-                        </article>
-                    </div>
-                </div>
-            </main>
-        </div>
-        <footer class="border-t border-[var(--secondary-color)] bg-[var(--accent-color)]">
-            <div class="container mx-auto flex flex-col items-center justify-between gap-3 px-4 py-6 text-sm text-[var(--text-secondary)] sm:flex-row sm:px-6 lg:px-8">
+        <footer class="site-footer">
+            <div class="container footer-inner">
                 <p>© 2026 Tetsuyuki Koyama. All rights reserved.</p>
-                <div class="flex items-center gap-5">
-                    <a class="transition-colors hover:text-[var(--primary-color)]" href="mailto:mini.mountain1990@gmail.com">Email</a>
-                    <a class="transition-colors hover:text-[var(--primary-color)]" href="https://github.com/ko-max-123">GitHub</a>
-                    <a class="transition-colors hover:text-[var(--primary-color)]" href="https://www.linkedin.com/in/%E5%93%B2%E4%B9%8B-%E5%B0%8F%E5%B1%B1-21531b6b/">LinkedIn</a>
+                <div class="footer-links">
+                    <a href="mailto:mini.mountain1990@gmail.com">Email</a>
+                    <a href="https://github.com/ko-max-123">GitHub</a>
+                    <a href="https://www.linkedin.com/in/%E5%93%B2%E4%B9%8B-%E5%B0%8F%E5%B1%B1-21531b6b/">LinkedIn</a>
                 </div>
             </div>
         </footer>
