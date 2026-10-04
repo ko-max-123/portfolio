@@ -1,0 +1,6 @@
+(function(){
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[c]));
+function card(p,i){const tags=p.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join('');let a='';if(p.live)a+=`<a href="${p.live}" target="_blank" rel="noopener"><span><span class="dot"></span>LIVE</span><span>↗</span></a>`;if(p.repo)a+=`<a class="secondary" href="${p.repo}" target="_blank" rel="noopener"><span>CODE</span><span>↗</span></a>`;return `<article class="project"><div class="mono">${String(i+1).padStart(2,'0')}</div><div><h3>${esc(p.title)}</h3><p>${esc(p.summary)}</p></div><div class="tags">${tags}</div><div class="actions">${a}</div></article>`}
+function render(root,items){if(root)root.innerHTML=items.map(card).join('')}
+document.addEventListener('DOMContentLoaded',()=>{render(document.querySelector('[data-featured]'),PROJECTS.filter(p=>p.featured).slice(0,6));const all=document.querySelector('[data-projects]');render(all,PROJECTS);document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(x=>x.classList.remove('active'));b.classList.add('active');const f=b.dataset.filter;render(all,f==='all'?PROJECTS:PROJECTS.filter(p=>p.cat.includes(f))) }))});
+})();
