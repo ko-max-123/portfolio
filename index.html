@@ -1,7 +1,126 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tetsuyuki Koyama — Portfolio Prototype</title><link rel="stylesheet" href="styles.css"></head><body>
-<header class="site-header"><div class="container header-inner"><a class="brand" href="index.html">Tetsuyuki Koyama<small>Software Engineer</small></a><nav class="nav"><a class="active" href="index.html">Home</a><a href="projects.html">Projects</a><a href="career.html">Career</a></nav><div class="header-right"><a href="https://github.com/ko-max-123" target="_blank">GitHub ↗</a></div></div></header>
-<main><section class="hero"><div class="container hero-grid"><div><p class="eyebrow">WEB / TOOL / RESEARCH / PROTOTYPE</p><h1>Build.<span>Test. Improve.</span></h1><p class="hero-copy">Webシステム開発の経験を軸に、研究プロトタイプ、PWA、旅行・キャンプ向けツールなどを、実際に触れる形までつくっています。</p><div class="hero-actions"><a class="btn primary" href="projects.html">制作物を見る →</a><a class="btn" href="career.html">経歴を見る</a></div></div><aside class="profile-card"><div class="profile-mark">TK</div><div><div class="mono">Profile / 01</div><h2>Tetsuyuki Koyama</h2><p>つくって、試して、改善する。小さく速く回す開発を大切にしています。</p></div></aside></div></section>
-<section class="section"><div class="container"><div class="section-head"><div class="mono">01 / Selected work</div><div><h2>最近の制作物</h2><p>公開中のGitHub PagesやWebアプリを中心に、実際に触れる作品を前面に出す構成です。</p></div></div><div class="project-list" data-featured></div><div style="margin-top:28px"><a class="btn" href="projects.html">すべての制作物を見る →</a></div></div></section>
-<section class="section"><div class="container"><div class="section-head"><div class="mono">02 / Approach</div><div><h2>つくり方</h2><p>完成品だけではなく、試作・検証・改善のプロセスが伝わるポートフォリオにします。</p></div></div><div class="approach"><article><div class="mono">01 / Prototype</div><h3>まず動かす</h3><p>アイデアを画面と操作に落とし、早い段階で使い勝手を確認。</p></article><article><div class="mono">02 / Verify</div><h3>使って確かめる</h3><p>PC・スマホ・オフライン・印刷など実際の利用シーンで検証。</p></article><article><div class="mono">03 / Iterate</div><h3>改善を重ねる</h3><p>一度作って終わりではなく、使いにくさや運用負荷を見つけて更新。</p></article></div></div></section>
-<section class="section"><div class="container"><div class="contact"><div><p class="eyebrow">CONTACT</p><h2>See the code.<br>Try the builds.</h2><p>作品をまず触ってもらえる構成を意識したデザイン案です。</p></div><div class="contact-links"><a href="https://github.com/ko-max-123" target="_blank">GitHub ↗</a><a href="projects.html">Projects →</a></div></div></div></section></main>
-<footer class="footer"><div class="container footer-inner"><span>Portfolio Prototype 2026</span><span>No GitHub changes</span></div></footer><script src="projects-data.js"></script><script src="site.js"></script></body></html>
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TETSUYUKI LAB - Web、研究、旅、キャンプ、実験ツールを作る個人開発ラボ。">
+  <title>TETSUYUKI LAB</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="lab-logo" href="./index.html">
+      <span class="logo-mark">TK</span>
+      <span><strong>TETSUYUKI LAB</strong><small>BUILD / TEST / PLAY</small></span>
+    </a>
+    <div class="top-status">
+      <span class="status-dot"></span>
+      <span>LAB ONLINE</span>
+      <span class="clock" id="clock">--:--</span>
+    </div>
+    <nav>
+      <a href="#works">WORKS</a>
+      <a href="#about">ABOUT</a>
+      <a href="./career.html">LOG</a>
+      <a href="https://github.com/ko-max-123" target="_blank" rel="noopener">GITHUB ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-stamp">PERSONAL<br>EXPERIMENT<br>SITE</div>
+      <div class="hero-copy">
+        <p class="kicker">NOT A NORMAL PORTFOLIO.</p>
+        <h1>作る。<br><span>試す。</span><br>また作る。</h1>
+        <p class="lead">Webアプリ、研究プロトタイプ、旅の道具、キャンプ用ツール。<br>必要になったものや、気になったものを、とりあえず動くところまで持っていく場所です。</p>
+        <div class="hero-buttons">
+          <a class="chunky primary" href="#works">実験物を見る ↓</a>
+          <button class="chunky" id="randomJump" type="button">ランダムに1個見る ⚄</button>
+        </div>
+      </div>
+      <div class="hero-machine" aria-label="制作スタイルのメーター">
+        <div class="machine-label">LAB METER / 2026</div>
+        <div class="meter-row"><span>WEB</span><div><i style="--v:91%"></i></div><b>91</b></div>
+        <div class="meter-row"><span>TOOLS</span><div><i style="--v:86%"></i></div><b>86</b></div>
+        <div class="meter-row"><span>RESEARCH</span><div><i style="--v:72%"></i></div><b>72</b></div>
+        <div class="meter-row"><span>OUTDOOR</span><div><i style="--v:80%"></i></div><b>80</b></div>
+        <div class="machine-footer">STATUS: MAKING SOMETHING</div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div>TRAVEL JOURNAL ✦ CAMP LAYOUT LAB ✦ CAMPFIRE TOPICS ✦ SECURITY DEMOS ✦ 3D CAPTCHA ✦ SHIORI MAKER ✦ LAB WEBSITE ✦ ROT3D-CHA ✦</div>
+    </div>
+
+    <section class="works" id="works">
+      <div class="section-heading">
+        <div>
+          <span class="section-code">/ EXPERIMENT SHELF 01</span>
+          <h2>触れる制作物</h2>
+        </div>
+        <div class="controls">
+          <div class="filter-set" id="filters"></div>
+          <button class="shuffle" id="shuffle" type="button">SHUFFLE ↻</button>
+        </div>
+      </div>
+      <div class="project-wall" id="projectWall"></div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-title">
+        <span class="section-code">/ LAB NOTES 02</span>
+        <h2>何をしている人？</h2>
+      </div>
+      <div class="notes-grid">
+        <article class="note note-yellow">
+          <span class="pin"></span>
+          <small>NOTE #01</small>
+          <h3>まず動かす</h3>
+          <p>仕様を考え続けるより、まず触れるものを作る。動けば、次に直すところが見える。</p>
+        </article>
+        <article class="note note-blue">
+          <span class="tape"></span>
+          <small>NOTE #02</small>
+          <h3>用途がバラバラ</h3>
+          <p>研究、ゲーム、旅行、キャンプ、業務支援。テーマより「困りごと」を起点に作ることが多いです。</p>
+        </article>
+        <article class="note note-pink">
+          <span class="pin"></span>
+          <small>NOTE #03</small>
+          <h3>完成後も触る</h3>
+          <p>公開したら終わりではなく、実際に使って不便なところを更新。V2、V3になりがち。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="terminal-section">
+      <div class="terminal">
+        <div class="terminal-top"><span></span><span></span><span></span><b>tetsuyuki@lab:~</b></div>
+        <div class="terminal-body">
+          <p><em>$</em> whoami</p>
+          <p class="result">Tetsuyuki Koyama / Software Engineer</p>
+          <p><em>$</em> current_mode</p>
+          <p class="result">prototype → test → improve → repeat</p>
+          <p><em>$</em> open github</p>
+          <p class="result"><a href="https://github.com/ko-max-123" target="_blank" rel="noopener">github.com/ko-max-123 ↗</a></p>
+          <p class="cursor-line"><em>$</em> <span class="cursor"></span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>TETSUYUKI LAB</strong><br><small>UNFINISHED BY DESIGN.</small></div>
+    <div class="footer-links">
+      <a href="./projects.html">ALL PROJECTS</a>
+      <a href="./career.html">CAREER LOG</a>
+      <a href="mailto:mini.mountain1990@gmail.com">MAIL</a>
+    </div>
+    <div class="footer-year">© 2026</div>
+  </footer>
+
+  <script src="./projects-data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
