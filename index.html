@@ -2,125 +2,53 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="TETSUYUKI LAB - Web、研究、旅、キャンプ、実験ツールを作る個人開発ラボ。">
-  <title>TETSUYUKI LAB</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Tetsuyuki Koyamaの個人サイト。LABでは個人制作・研究の発想と改善過程、BASEではWeb開発・QA・テスト自動化・業務改善の実績を掲載。">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Tetsuyuki Koyama">
+  <meta name="google-site-verification" content="L4IvNJhZD9AygXZNSC45SL-LYYBehn3dd7ZT6utL0IA" />
+  <title>Tetsuyuki Koyama — LAB / BASE</title>
   <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-  <div class="noise"></div>
-  <header class="topbar">
-    <a class="lab-logo" href="./index.html">
-      <span class="logo-mark">TK</span>
-      <span><strong>TETSUYUKI LAB</strong><small>BUILD / TEST / PLAY</small></span>
-    </a>
-    <div class="top-status">
-      <span class="status-dot"></span>
-      <span>LAB ONLINE</span>
-      <span class="clock" id="clock">--:--</span>
-    </div>
-    <nav>
-      <a href="#works">WORKS</a>
-      <a href="#about">ABOUT</a>
-      <a href="./career.html">LOG</a>
-      <a href="https://github.com/ko-max-123" target="_blank" rel="noopener">GITHUB ↗</a>
-    </nav>
-  </header>
+<body data-theme="lab">
+<header class="site-header"><div class="container header-inner"><a class="brand" href="./index.html"><span class="brand-mark">TK</span><span class="brand-copy"><strong>TETSUYUKI</strong><small>LAB / BASE</small></span></a><nav class="global-nav" data-nav><a class="active" href="./index.html">HOME</a><a href="./projects.html">PROJECTS</a><a href="./career.html">CAREER</a><a href="https://github.com/ko-max-123" target="_blank" rel="noopener">GITHUB ↗</a></nav><div class="header-tools"><div class="mode-switch"><span data-mode-label>LAB MODE</span><small data-mode-sub>IDEAS / PROCESS</small><button type="button" data-theme-toggle aria-label="LABモードとBASEモードを切り替える"></button></div><b class="header-clock" data-clock>--:--:--</b><button class="menu-btn" data-menu-btn aria-expanded="false">☰</button></div></div></header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-stamp">PERSONAL<br>EXPERIMENT<br>SITE</div>
-      <div class="hero-copy">
-        <p class="kicker">NOT A NORMAL PORTFOLIO.</p>
-        <h1>作る。<br><span>試す。</span><br>また作る。</h1>
-        <p class="lead">Webアプリ、研究プロトタイプ、旅の道具、キャンプ用ツール。<br>必要になったものや、気になったものを、とりあえず動くところまで持っていく場所です。</p>
-        <div class="hero-buttons">
-          <a class="chunky primary" href="#works">実験物を見る ↓</a>
-          <button class="chunky" id="randomJump" type="button">ランダムに1個見る ⚄</button>
-        </div>
-      </div>
-      <div class="hero-machine" aria-label="制作スタイルのメーター">
-        <div class="machine-label">LAB METER / 2026</div>
-        <div class="meter-row"><span>WEB</span><div><i style="--v:91%"></i></div><b>91</b></div>
-        <div class="meter-row"><span>TOOLS</span><div><i style="--v:86%"></i></div><b>86</b></div>
-        <div class="meter-row"><span>RESEARCH</span><div><i style="--v:72%"></i></div><b>72</b></div>
-        <div class="meter-row"><span>OUTDOOR</span><div><i style="--v:80%"></i></div><b>80</b></div>
-        <div class="machine-footer">STATUS: MAKING SOMETHING</div>
-      </div>
-    </section>
+<main>
+<section class="hero"><div class="container hero-grid"><div>
+  <p class="kicker"><span class="only-lab">PERSONAL LAB / BUILD, USE, REBUILD</span><span class="only-base">SOFTWARE ENGINEER / QA / TEST AUTOMATION</span></p>
+  <h1><span class="only-lab">MAKE IT.<br><em>USE IT.</em><br>CHANGE IT.</span><span class="only-base">BUILD.<br><em>VERIFY.</em><br>IMPROVE.</span></h1>
+  <p class="lead"><span class="only-lab">旅行しおり、収集手帳、キャンプ設営支援、焚き火会話、3D CAPTCHA、QR多重化。日常の困りごとや研究上の疑問を、まず触れる形にしてから改善しています。</span><span class="only-base">2015年からWeb開発に携わり、バックエンド開発・タブレットアプリ開発・チームリードを経験。2026年7月から株式会社SHIFTに在籍し、現在はソフトウェア品質・テスト領域で、モバイルテスト、自動化PoC、テスト運用改善に取り組んでいます。</span></p>
+  <div class="hero-actions"><a class="btn primary" href="./projects.html"><span class="only-lab">制作と研究を見る →</span><span class="only-base">実績・ケースを見る →</span></a><button class="btn" data-random type="button"><span class="only-lab">公開物を1つ開く ⚄</span><span class="only-base">OPEN RANDOM LIVE ↗</span></button><a class="btn" href="./career.html"><span class="only-lab">技術遍歴</span><span class="only-base">CAREER LOG</span></a></div>
+</div>
+<aside class="workbench">
+  <div class="bench-item"><b>01</b><div><strong>Camp Layout Lab</strong><span>地図＋風向から、GPS・端末方位まで扱う現地向け設営支援へ更新。</span></div></div>
+  <div class="bench-item"><b>02</b><div><strong>旅しおり / 収集手帳</strong><span>localStorage・IndexedDB・PWAで、静的サイトを実用品にする。</span></div></div>
+  <div class="bench-item"><b>03</b><div><strong>3D CAPTCHA / QR</strong><span>空間認識、点群、色・位相・時間方向の情報多重化を検証。</span></div></div>
+  <div class="scribble"><b>BUILD RULE</b>最初の案を守るより、使って分かったことを次の仕様に入れる。</div>
+</aside>
+<aside class="operator-panel"><div class="operator-head"><span>OPERATOR PROFILE / TK-2026</span><span>ACTIVE</span></div><div class="operator-body"><div class="operator-name"><div><h3>TETSUYUKI KOYAMA</h3><span>CURRENT: SHIFT INC. / SINCE 2026.07</span></div><span>ENGINEER</span></div><div class="operator-stats"><div class="op-stat"><small>WEB DEVELOPMENT</small><strong>9+ YEARS</strong></div><div class="op-stat"><small>TEAM LEAD</small><strong>EXPERIENCED</strong></div><div class="op-stat"><small>CURRENT DOMAIN</small><strong>QA / TEST</strong></div><div class="op-stat"><small>AUTOMATION</small><strong>APPIUM / PLAYWRIGHT</strong></div></div><div class="cap-strip">開発経験を持ったまま品質側へ。実装・仕様・テストの間を行き来しながら、現場で詰まる部分を小さな仕組みに置き換えています。</div></div></aside>
+</div></section>
 
-    <div class="ticker" aria-hidden="true">
-      <div>TRAVEL JOURNAL ✦ CAMP LAYOUT LAB ✦ CAMPFIRE TOPICS ✦ SECURITY DEMOS ✦ 3D CAPTCHA ✦ SHIORI MAKER ✦ LAB WEBSITE ✦ ROT3D-CHA ✦</div>
-    </div>
+<div class="ticker"><div class="ticker-track"><span><span class="only-lab">PWA ✦ CAMP TOOLS ✦ 3D CAPTCHA ✦ DUAL QR ✦ IMAGE PROCESSING ✦ GAME TOOLS ✦</span><span class="only-base">WEB DEVELOPMENT ✦ TEAM LEAD ✦ MOBILE TEST ✦ APPIUM ✦ PLAYWRIGHT ✦ QA PROCESS ✦</span></span><span><span class="only-lab">PWA ✦ CAMP TOOLS ✦ 3D CAPTCHA ✦ DUAL QR ✦ IMAGE PROCESSING ✦ GAME TOOLS ✦</span><span class="only-base">WEB DEVELOPMENT ✦ TEAM LEAD ✦ MOBILE TEST ✦ APPIUM ✦ PLAYWRIGHT ✦ QA PROCESS ✦</span></span></div></div>
 
-    <section class="works" id="works">
-      <div class="section-heading">
-        <div>
-          <span class="section-code">/ EXPERIMENT SHELF 01</span>
-          <h2>触れる制作物</h2>
-        </div>
-        <div class="controls">
-          <div class="filter-set" id="filters"></div>
-          <button class="shuffle" id="shuffle" type="button">SHUFFLE ↻</button>
-        </div>
-      </div>
-      <div class="project-wall" id="projectWall"></div>
-    </section>
+<section class="section"><div class="container"><div class="section-head"><div><span class="section-code"><span class="only-lab">/ CURRENT BUILDS 01</span><span class="only-base">01 / SELECTED CASES</span></span><h2><span class="only-lab">実際に作ってきたもの</span><span class="only-base">仕事と実装で示せること</span></h2></div><p class="section-intro"><span class="only-lab">公開中のWebアプリと研究プロトタイプを、作った理由と改善過程まで含めて掲載しています。</span><span class="only-base">公開可能な個人制作に加えて、業務上の顧客情報やソースを出さずに説明できる非公開ケーススタディも掲載しています。</span></p></div><div class="project-wall" data-featured></div><div style="margin-top:26px"><a class="btn" href="./projects.html"><span class="only-lab">ALL BUILDS →</span><span class="only-base">ALL CASES →</span></a></div></div></section>
 
-    <section class="about" id="about">
-      <div class="about-title">
-        <span class="section-code">/ LAB NOTES 02</span>
-        <h2>何をしている人？</h2>
-      </div>
-      <div class="notes-grid">
-        <article class="note note-yellow">
-          <span class="pin"></span>
-          <small>NOTE #01</small>
-          <h3>まず動かす</h3>
-          <p>仕様を考え続けるより、まず触れるものを作る。動けば、次に直すところが見える。</p>
-        </article>
-        <article class="note note-blue">
-          <span class="tape"></span>
-          <small>NOTE #02</small>
-          <h3>用途がバラバラ</h3>
-          <p>研究、ゲーム、旅行、キャンプ、業務支援。テーマより「困りごと」を起点に作ることが多いです。</p>
-        </article>
-        <article class="note note-pink">
-          <span class="pin"></span>
-          <small>NOTE #03</small>
-          <h3>完成後も触る</h3>
-          <p>公開したら終わりではなく、実際に使って不便なところを更新。V2、V3になりがち。</p>
-        </article>
-      </div>
-    </section>
+<section class="section"><div class="container"><div class="section-head"><div><span class="section-code"><span class="only-lab">/ WHAT I KEEP DOING 02</span><span class="only-base">02 / CURRENT PRACTICE</span></span><h2><span class="only-lab">制作で繰り返していること</span><span class="only-base">現在のQA業務で取り組んでいること</span></h2></div></div>
+<div class="lab-notes"><div class="questions">
+  <article class="question-card"><small>BUILD / 01</small><h3>静的サイトを実用品にする</h3><p>localStorage、IndexedDB、Service Worker、JSON入出力を使い、バックエンドなしでも継続利用できるWebアプリを複数制作しています。</p></article>
+  <article class="question-card"><small>BUILD / 02</small><h3>現地利用で仕様を変える</h3><p>キャンプ設営ツールでは3D表現よりGPS・方位・風向が重要だと判断し、実際の利用場面を基準に機能構成を変えました。</p></article>
+  <article class="question-card"><small>RESEARCH / 03</small><h3>研究アイデアを操作可能なUIにする</h3><p>3D CAPTCHA、Rot3D-CHA、Dual QRなど、認証・画像表現の研究アイデアをブラウザで試せる形に実装しています。</p></article>
+</div><aside class="lab-manifesto"><small>PERSONAL DEVELOPMENT</small><h3>思いつきで終わらせず、<br>触れるところまで作る。</h3><p>完成品の数より、<strong>実際に使う／測る／直す</strong>ところまで持っていくことを重視しています。</p></aside></div>
+<div class="cap-grid">
+  <article class="cap-card"><small>01 / MOBILE TEST</small><h3>モバイルアプリテスト</h3><p>機能・回帰テスト、実機確認、テストデータ準備を含むテスト支援。</p><ul><li>Android実機</li><li>ST / UAT支援</li><li>実施可否・詰まりの整理</li></ul></article>
+  <article class="cap-card"><small>02 / AUTOMATION</small><h3>Appium / Playwright</h3><p>既存テスト資産を活かしながら自動化へつなぐPoCを継続。</p><ul><li>Appium + ADB recorder</li><li>pytest再生</li><li>Excel → Playwright</li></ul></article>
+  <article class="cap-card"><small>03 / QA PROCESS</small><h3>テスト運用改善</h3><p>準備不足や情報不足を見える形にし、実施判断と共有を支援。</p><ul><li>システム理解マップ</li><li>実施可能一覧</li><li>週次予定 / blocker記録</li></ul></article>
+  <article class="cap-card"><small>04 / TOOLING</small><h3>現場向け小型ツール</h3><p>大量の手作業を、小さな自動化・Web UIへ置き換える。</p><ul><li>証跡フォルダ生成</li><li>画像仕分け</li><li>マニュアル / 画面遷移図改善</li></ul></article>
+</div>
+</div></section>
 
-    <section class="terminal-section">
-      <div class="terminal">
-        <div class="terminal-top"><span></span><span></span><span></span><b>tetsuyuki@lab:~</b></div>
-        <div class="terminal-body">
-          <p><em>$</em> whoami</p>
-          <p class="result">Tetsuyuki Koyama / Software Engineer</p>
-          <p><em>$</em> current_mode</p>
-          <p class="result">prototype → test → improve → repeat</p>
-          <p><em>$</em> open github</p>
-          <p class="result"><a href="https://github.com/ko-max-123" target="_blank" rel="noopener">github.com/ko-max-123 ↗</a></p>
-          <p class="cursor-line"><em>$</em> <span class="cursor"></span></p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div><strong>TETSUYUKI LAB</strong><br><small>UNFINISHED BY DESIGN.</small></div>
-    <div class="footer-links">
-      <a href="./projects.html">ALL PROJECTS</a>
-      <a href="./career.html">CAREER LOG</a>
-      <a href="mailto:mini.mountain1990@gmail.com">MAIL</a>
-    </div>
-    <div class="footer-year">© 2026</div>
-  </footer>
-
-  <script src="./projects-data.js"></script>
-  <script src="./app.js"></script>
-</body>
-</html>
+<section class="section"><div class="container"><div class="console"><div class="console-top">tetsuyuki@lab-base:~</div><div class="console-body"><div><span class="prompt">$</span> <span class="only-lab">show --current-focus</span><span class="only-base">profile --current</span></div><div class="result"><span class="only-lab">PWA / Camp tools / 3D CAPTCHA / QR / image processing</span><span class="only-base">SHIFT Inc. / Software Quality & Testing / Mobile test support</span></div><div><span class="prompt">$</span> <span class="only-lab">show --method</span><span class="only-base">profile --tooling</span></div><div class="result"><span class="only-lab">prototype → use → notice → rebuild</span><span class="only-base">Appium / ADB / pytest / Playwright / Excel / M365 Copilot</span></div></div></div></div></section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><div><strong>TETSUYUKI LAB / BASE</strong> — PERSONAL BUILDS & ENGINEERING WORK.</div><div class="footer-links"><a href="./projects.html">PROJECTS</a><a href="./career.html">CAREER</a><a href="mailto:mini.mountain1990@gmail.com">MAIL</a></div><div>© 2026</div></div></footer>
+<script src="./projects-data.js"></script><script src="./app.js"></script>
+</body></html>

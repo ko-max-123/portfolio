@@ -1,5 +1,17 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ALL PROJECTS — TETSUYUKI LAB</title><link rel="stylesheet" href="./style.css"></head><body>
-<header class="topbar"><a class="lab-logo" href="./index.html"><span class="logo-mark">TK</span><span><strong>TETSUYUKI LAB</strong><small>PROJECT ARCHIVE</small></span></a><div class="top-status"><span class="status-dot"></span><span>ARCHIVE MODE</span></div><nav><a href="./index.html">HOME</a><a href="./career.html">LOG</a><a href="https://github.com/ko-max-123" target="_blank" rel="noopener">GITHUB ↗</a></nav></header>
-<main><section class="works" style="padding-top:90px"><div class="section-heading"><div><span class="section-code">/ COMPLETE INDEX</span><h2>全部置き場</h2><p style="max-width:650px;line-height:1.8">完成品だけではなく、実験・試作・用途特化ツールも同じ棚に置いています。</p></div><div class="controls"><div class="filter-set" id="filters"></div><button class="shuffle" id="shuffle" type="button">SHUFFLE ↻</button></div></div><div class="project-wall" id="projectWall"></div></section></main>
-<footer><div><strong>TETSUYUKI LAB</strong><br><small>PROJECT ARCHIVE</small></div><div class="footer-links"><a href="./index.html">HOME</a><a href="./career.html">CAREER LOG</a></div><div class="footer-year">© 2026</div></footer>
-<script src="./projects-data.js"></script><script src="./app.js"></script></body></html>
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Tetsuyuki Koyamaの制作・研究・QAケース一覧。公開Webアプリ、3D CAPTCHA研究、Appium/Playwright自動化PoC、テスト運用改善を掲載。">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Tetsuyuki Koyama">
+  <meta name="google-site-verification" content="L4IvNJhZD9AygXZNSC45SL-LYYBehn3dd7ZT6utL0IA" />
+  <title>Projects — Tetsuyuki Koyama</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-theme="lab">
+<header class="site-header"><div class="container header-inner"><a class="brand" href="./index.html"><span class="brand-mark">TK</span><span class="brand-copy"><strong>TETSUYUKI</strong><small>LAB / BASE</small></span></a><nav class="global-nav" data-nav><a href="./index.html">HOME</a><a class="active" href="./projects.html">PROJECTS</a><a href="./career.html">CAREER</a><a href="https://github.com/ko-max-123" target="_blank" rel="noopener">GITHUB ↗</a></nav><div class="header-tools"><div class="mode-switch"><span data-mode-label>LAB MODE</span><small data-mode-sub>IDEAS / PROCESS</small><button type="button" data-theme-toggle aria-label="LABモードとBASEモードを切り替える"></button></div><b class="header-clock" data-clock>--:--:--</b><button class="menu-btn" data-menu-btn aria-expanded="false">☰</button></div></div></header>
+<main><section class="page-hero"><div class="container"><p class="kicker"><span class="only-lab">PUBLIC BUILDS / RESEARCH / PERSONAL TOOLS</span><span class="only-base">PUBLIC WORK + NON-PUBLIC CASE STUDIES</span></p><h1><span class="only-lab">BUILDS</span><span class="only-base">CASES</span></h1><p><span class="only-lab">旅行・キャンプ・研究・ゲームを中心に、実際に公開したものと研究プロトタイプを掲載しています。各カードには、作り始めた理由と実装した内容を記載しています。</span><span class="only-base">公開可能な制作物に加え、現職で扱った顧客名・画面・テストデータ・ソースコードを出さずに、取り組みの設計と技術要素だけを整理したケーススタディを掲載しています。</span></p><div class="mode-explain"><i></i><span><span class="only-lab">LAB = 個人制作・研究の目的と改善過程</span><span class="only-base">BASE = 実装・QA・自動化・運用改善の証拠</span></span></div><div class="note-box only-base">業務系ケースでは、顧客固有情報・業務データ・認証情報・社内資料・ソースコードは掲載していません。</div></div></section>
+<section class="section"><div class="container"><div class="controls" data-filters></div><div class="controls"><button class="filter shuffle" type="button" data-shuffle><span class="only-lab">並び替える ↻</span><span class="only-base">REORDER ↻</span></button></div><div class="project-wall" data-projects></div></div></section></main>
+<footer class="site-footer"><div class="container footer-inner"><div><strong>TETSUYUKI LAB / BASE</strong></div><div class="footer-links"><a href="./index.html">HOME</a><a href="./career.html">CAREER</a></div><div>© 2026</div></div></footer><script src="./projects-data.js"></script><script src="./app.js"></script></body></html>
