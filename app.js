@@ -10,6 +10,12 @@
     localStorage.setItem('portfolio-theme',next);
     document.querySelectorAll('[data-mode-label]').forEach(el=>el.textContent=next==='lab'?'LAB MODE':'BASE MODE');
     document.querySelectorAll('[data-mode-sub]').forEach(el=>el.textContent=next==='lab'?'IDEAS / PROCESS':'WORK / CAPABILITY');
+    const fav=document.querySelector('[data-dynamic-favicon]');
+    if(fav) fav.href=next==='lab'?'./assets/icons/favicon-lab.svg':'./assets/icons/favicon-base.svg';
+    const favPng=document.querySelector('[data-dynamic-favicon-png]');
+    if(favPng) favPng.href=next==='lab'?'./assets/icons/favicon-lab-32x32.png':'./assets/icons/favicon-base-32x32.png';
+    const themeColor=document.querySelector('[data-theme-color]');
+    if(themeColor) themeColor.content=next==='lab'?'#F7F4EC':'#0A0F0E';
     currentFilter='ALL';
     renderFeatured(); renderProjects(); renderFilters();
     if(!initial){body.classList.remove('mode-flash');void body.offsetWidth;body.classList.add('mode-flash');}

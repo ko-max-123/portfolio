@@ -27,3 +27,12 @@ V5のLAB / BASEデザインを維持し、掲載文言を実際の経歴・制�
 - `projects-data.js`
 - `app.js`
 - `style.css`
+
+
+## ファビコン / アプリアイコン
+
+- LAB MODE: `assets/icons/favicon-lab.svg`
+- BASE MODE: `assets/icons/favicon-base.svg`
+- 共通 / ブックマーク用: `assets/icons/favicon.svg`, `favicon.ico`
+- Apple Touch Icon / PWA icons / `site.webmanifest` を同梱
+- LAB / BASE切替時にブラウザのファビコンと `theme-color` も自動で切り替わります。
