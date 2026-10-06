@@ -154,23 +154,34 @@ window.PROJECTS = [
     }
   },
 
-  /* Work / QA case studies. No customer-specific data or source code is published. */
+  /* Personal test automation experiments. */
   {
-    id:"QA-001", title:"Android操作レコーダー / Appium", showLab:false, showBase:true, featuredBase:true,
-    tags:["Appium","ADB","pytest","Android"], baseCats:["QA","AUTOMATION","TOOLS"],
+    id:"QA-001", title:"Android操作レコーダー / Appium", showLab:true, showBase:false, featuredLab:true, featuredBase:false,
+    tags:["Appium","ADB","pytest","Android"], baseCats:["QA","AUTOMATION","TOOLS"], labCats:["AUTOMATION","EXPERIMENT","TOOLS"],
+    lab:{
+      label:"個人で試すAndroid操作の自動化", question:"実機での操作を記録して、繰り返しのテストに使えるようにしたい。",
+      summary:"個人の試作として、Windows PCとAndroid実機をUSBでつなぎ、タップやスクロール、スワイプ、戻る操作をADBで記録する仕組みを作っています。画面画像やUIの構造、操作対象の候補をYAMLに保存し、Appiumでの再生やpytestでの実行を検証しています。",
+      points:["ADBで実機の操作を記録","UI要素の情報と画面サイズに対する座標の比率を保存","Appium・pytestで操作の再生を検証"]
+    },
     base:{
       label:"Androidの操作記録と再生", summary:"Windows PCとAndroid実機をUSBでつなぎ、タップやスクロール、スワイプ、戻る操作をADBで記録する仕組みを試作しました。画面画像やUIの構造、操作対象の候補、画面サイズに対する座標の比率をYAMLに保存し、操作の再生やpytestでの実行につなげています。",
       skills:["Appium","ADB","Python / pytest","UI hierarchy analysis"], evidence:"WebView内の要素を取得できない場合に備え、要素を特定する情報と座標の両方を記録する設計にしました。"
     }
   },
   {
-    id:"QA-002", title:"ExcelテストケースのPlaywright変換", showLab:false, showBase:true, featuredBase:true,
-    tags:["Playwright","Excel","Copilot","TypeScript"], baseCats:["QA","AUTOMATION","AI"],
+    id:"QA-002", title:"ExcelテストケースのPlaywright変換", showLab:true, showBase:false, featuredLab:true, featuredBase:false,
+    tags:["Playwright","Excel","Copilot","TypeScript"], baseCats:["QA","AUTOMATION","AI"], labCats:["AUTOMATION","EXPERIMENT","TOOLS"],
+    lab:{
+      label:"個人で試すテストケースの自動化", question:"Excelで整理したテストケースを、ブラウザで実行できる形に変換したい。",
+      summary:"個人の検証として、Excelやテスト管理ツールCATのテストケースを、CopilotでPlaywrightのシナリオに変換する方法を試しています。基本処理や環境設定、認証情報を分け、storageStateでログイン状態を再利用する構成も検証しています。",
+      points:["ExcelのテストケースをPlaywrightへ変換","Copilotを使った変換ルールを検討","環境設定・認証処理を分けて再利用"]
+    },
     base:{
       label:"既存のテストケースを使った自動化", summary:"Excelやテスト管理ツールCATのテストケースを、CopilotでPlaywrightのシナリオに変換する方法を検証しています。基本処理や環境設定、認証情報を分け、ログイン状態をstorageStateで再利用する構成を作りました。",
       skills:["Playwright","TypeScript","Excel parsing","M365 Copilot"], evidence:"既存のテストケースを段階的に自動化できるよう、変換ルールやサンプル、環境設定、認証の準備処理を分けて整理しました。"
     }
   },
+  /* Work / QA case studies. No customer-specific data or source code is published. */
   {
     id:"QA-003", title:"テスト実施状況の見える化", showLab:false, showBase:true, featuredBase:true,
     tags:["QA operation","Planning","Excel"], baseCats:["QA","PROCESS"],

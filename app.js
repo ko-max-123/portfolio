@@ -78,8 +78,8 @@
   function renderFilters(){
     const fs=document.querySelector('[data-filters]'); if(!fs)return;
     const cats=theme()==='lab'
-      ?['ALL','TRAVEL','CAMP','EXPERIMENT','UTILITY','RESEARCH','WEB','TOOLS','PLAY','EDUCATION','MAINTAINABILITY']
-      :['ALL','QA','AUTOMATION','AI','PROCESS','WEB','PWA','PROTOTYPE','RESEARCH','TOOLS'];
+      ?['ALL','TRAVEL','CAMP','EXPERIMENT','AUTOMATION','UTILITY','RESEARCH','WEB','TOOLS','PLAY','EDUCATION','MAINTAINABILITY']
+      :['ALL','QA','AI','PROCESS','WEB','PWA','PROTOTYPE','RESEARCH','TOOLS'];
     if(!cats.includes(currentFilter))currentFilter='ALL';
     fs.innerHTML=cats.map(c=>`<button class="filter ${c===currentFilter?'active':''}" data-filter="${esc(c)}">${esc(c)}</button>`).join('');
   }
