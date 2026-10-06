@@ -4,13 +4,13 @@ window.PROJECTS = [
     tags:["PWA","IndexedDB","Image handling"], baseCats:["WEB","PWA"], labCats:["TRAVEL","EXPERIMENT"],
     live:"https://ko-max-123.github.io/travel/", code:"https://github.com/ko-max-123/travel",
     lab:{
-      label:"旅の記録を、本棚として育てる", question:"ポケフタや一宮巡りの写真を、一覧ではなく『自分の収集手帳』として残したい。",
-      summary:"ポケフタ482件、一宮103社の初期データを持ち、都道府県ごとの写真・訪問記録を端末内に保存するPWA。自由帳も追加でき、旅の記録を本棚から選ぶ体験にしています。",
+      label:"旅の写真と訪問記録をまとめる", question:"ポケフタや一宮巡りの写真を、自分だけの手帳として残したい。",
+      summary:"ポケフタ482件、一宮103社の初期データを備えた収集記録アプリです。都道府県ごとの写真や訪問記録を端末に保存でき、自由帳も追加できます。本棚から手帳を選ぶように、旅の記録を見返せます。",
       points:["IndexedDBに写真・訪問記録を保存","画像を詳細用1280px／一覧用360pxへ縮小","Service WorkerによるPWA・オフライン対応"]
     },
     base:{
-      label:"大量画像を扱う端末内完結PWA", summary:"サーバへ写真を送らず、ブラウザ内に記録を保持する収集記録アプリ。1500枚規模を想定し、画像縮小・遅延読込・IndexedDB保存を組み合わせています。",
-      skills:["IndexedDB","PWA / Service Worker","Client-side image processing","Responsive UI"], evidence:"データ永続化、画像容量、スマホ利用、オフライン利用まで含めて、静的ホスティングだけで成立する構成にしました。"
+      label:"写真を端末に保存するPWA", summary:"写真や訪問記録をブラウザ内に保存するアプリです。1500枚規模の写真を扱うことを想定し、画像の縮小、必要な画像から読み込む処理、IndexedDBでの保存を組み合わせています。",
+      skills:["IndexedDB","PWA / Service Worker","Client-side image processing","Responsive UI"], evidence:"画像容量やスマホでの使いやすさに配慮し、記録の保存からオフライン利用まで、静的サイトで対応できる構成にしました。"
     }
   },
   {
@@ -18,13 +18,13 @@ window.PROJECTS = [
     tags:["PWA","localStorage","Print / PDF"], baseCats:["WEB","PWA"], labCats:["TRAVEL","UTILITY"],
     live:"https://ko-max-123.github.io/shiori/", code:"https://github.com/ko-max-123/shiori",
     lab:{
-      label:"旅行前の情報整理を、そのまま旅の道具にする", question:"予定・持ち物・予算が別々になる旅行準備を、ひとつのしおりにまとめたい。",
-      summary:"日別予定、持ち物、概算予算、表紙画像を編集しながら完成形を同時に確認できる旅行しおりPWA。複数の旅行を保存し、JSONで別端末へ持ち出せます。",
-      points:["3カラムで一覧・編集・プレビューを同時表示","ドラッグ&ドロップによる予定並べ替え","印刷/PDF向けの専用レイアウト"]
+      label:"旅行の準備をひとつのしおりに", question:"予定や持ち物、予算をまとめて、旅行中も見返せるようにしたい。",
+      summary:"日ごとの予定や持ち物、予算、表紙画像を編集できる旅行しおりアプリです。完成イメージを確認しながら編集でき、複数の旅行を保存できます。JSONで書き出して、別の端末に移すこともできます。",
+      points:["一覧・編集・プレビューを3カラムで表示","ドラッグ&ドロップで予定を並べ替え","印刷・PDF向けの専用レイアウト"]
     },
     base:{
-      label:"バックエンドなしの旅行計画アプリ", summary:"API・DB・ログインを使わず、localStorageとJSON入出力で複数しおりを管理。編集UIと印刷UIを分け、PCとスマホの両方で利用できるようにしています。",
-      skills:["localStorage","Drag & Drop","Print CSS","JSON import/export"], evidence:"静的サイトでも継続利用できるデータ設計と、編集・閲覧・印刷を切り替えるUIフローを実装しました。"
+      label:"ブラウザで使う旅行計画アプリ", summary:"localStorageで複数のしおりを保存し、JSONでデータを読み込み・書き出しできるアプリです。編集画面と印刷用のレイアウトを分け、PCとスマホの両方で使えるようにしています。",
+      skills:["localStorage","Drag & Drop","Print CSS","JSON import/export"], evidence:"繰り返し使える保存形式を設計し、編集・閲覧・印刷までの流れを静的サイトに実装しました。"
     }
   },
   {
@@ -32,13 +32,13 @@ window.PROJECTS = [
     tags:["Map","Weather API","GPS","Device orientation"], baseCats:["WEB","PROTOTYPE"], labCats:["CAMP","EXPERIMENT"],
     live:"https://ko-max-123.github.io/camp/04/", code:"https://github.com/ko-max-123/camp",
     lab:{
-      label:"設営図から、現地で使う道具へ", question:"風向きだけでなく、自分が今どちらを向いているかまで分かれば、設営判断がしやすくなる。",
-      summary:"当初は地図上の設営シミュレーターと3D表現を中心にしていましたが、実利用を考える中でGPS・端末方位・風向を重ねる方向へ変更。見栄えより現地で役立つことを優先しました。",
-      points:["MapLibre系の地図UIで設営位置を扱う","Open-Meteoの風向情報を表示","Geolocationと端末方位の取得を追加"]
+      label:"キャンプ場での設営を助ける", question:"現在地や向いている方向と風向きが分かれば、テントの配置を考えやすくなるのでは。",
+      summary:"地図上でキャンプの設営を考えるツールです。現地での使い方に合わせて当初の地図・3D中心の構成を見直し、GPSや端末の方位、風向を確認できる機能を加えました。",
+      points:["MapLibre系の地図UIで設営位置を確認","Open-Meteoの風向情報を表示","Geolocationと端末の方位情報を取得"]
     },
     base:{
-      label:"位置・気象・端末センサー統合UI", summary:"地図、気象API、位置情報、端末方位を組み合わせたキャンプ設営支援プロトタイプ。利用シーンから仕様を見直し、3D中心から現地判断中心へ変更しました。",
-      skills:["Geolocation","DeviceOrientation","Weather API","Map UI"], evidence:"『作った機能を守る』のではなく、利用目的に合わせて仕様そのものを変える反復型プロトタイピングを行いました。"
+      label:"地図・気象・位置情報の連携", summary:"地図や気象API、GPS、端末の方位情報を組み合わせた設営支援の試作品です。キャンプ場で配置を判断しやすくするため、表示する情報と機能を見直しました。",
+      skills:["Geolocation","DeviceOrientation","Weather API","Map UI"], evidence:"現地で必要になる情報を整理し、試作を重ねながら仕様を調整しました。"
     }
   },
   {
@@ -46,13 +46,13 @@ window.PROJECTS = [
     tags:["Weather API","Comparison","Decision support"], baseCats:["WEB","PROTOTYPE"], labCats:["CAMP","UTILITY"],
     live:"https://ko-max-123.github.io/camp/01/", code:"https://github.com/ko-max-123/camp",
     lab:{
-      label:"複数候補日の天気を、一度に比べる", question:"キャンプ候補日ごとに天気予報を開き直すのではなく、同じ観点で横並びにしたい。",
-      summary:"複数日程の気温、降水、風などを同じ画面で比較し、キャンプ向きの日を判断するためのツール。単なる予報表示ではなく、日程選択のための比較に寄せています。",
-      points:["候補日を同じレイアウトで比較","気温・雨・風をキャンプ目線で整理","複数日程の総合比較"]
+      label:"キャンプ候補日の天気を比べる", question:"候補日ごとの気温や雨、風を、同じ画面で比較したい。",
+      summary:"複数の日程について、気温や降水、風の予報を比較できるツールです。キャンプに向いている日を選びやすいよう、候補日ごとの情報を同じ形式で表示しています。",
+      points:["候補日を同じレイアウトで比較","設営や過ごしやすさに関わる気温・雨・風を表示","複数の条件をまとめて日程を検討"]
     },
     base:{
-      label:"気象データの比較・意思決定UI", summary:"外部気象データを日程単位で整理し、複数候補を横断比較できる画面に変換。情報取得よりも比較・選択を主目的に設計しています。",
-      skills:["API integration","Data normalization","Comparison UI","Responsive design"], evidence:"複数ソースの数値を、利用者が選択に使える粒度へ整形して表示するUIを実装しました。"
+      label:"日程選びに使える気象情報の表示", summary:"気象APIのデータを日程ごとに整理し、複数の候補を比較できる画面にしました。利用者が日程を選ぶときに必要な項目を、まとめて確認できる構成です。",
+      skills:["API integration","Data normalization","Comparison UI","Responsive design"], evidence:"気象データの数値を整理し、候補日を同じ条件で比べられる表示を実装しました。"
     }
   },
   {
@@ -60,13 +60,13 @@ window.PROJECTS = [
     tags:["JavaScript","Video","Ambient UX"], baseCats:["WEB","PROTOTYPE"], labCats:["CAMP","PLAY"],
     live:"https://ko-max-123.github.io/campfire-web/", code:"https://github.com/ko-max-123/campfire-web",
     lab:{
-      label:"会話を操作しない、会話支援", question:"焚き火を囲んだ会話で、アプリが主役にならずに沈黙だけを少し助けられないか。",
-      summary:"焚き火動画を背景に、一定間隔で話題カードだけが切り替わるWebアプリ。後から『同じキャンプ場の人がルーム参加できる』構想へ広げています。",
-      points:["操作要求を減らしたアンビエントUI","10/15/30分で話題切替","映像・音・話題の最小構成"]
+      label:"焚き火を囲む会話のきっかけに", question:"会話が途切れたときに、自然に次の話題を見つけられるようにしたい。",
+      summary:"焚き火の動画を背景に、一定間隔で話題カードが切り替わるWebアプリです。同じキャンプ場の人がルームに参加して使う形も、今後の案として検討しています。",
+      points:["会話中に操作が増えない画面構成","10・15・30分間隔で話題を切り替え","映像・音・話題を組み合わせて表示"]
     },
     base:{
-      label:"低操作型インタラクション設計", summary:"背景メディアとタイマー制御だけで会話のきっかけを提示するWebアプリ。利用者同士の会話を阻害しないよう、操作量を意図的に減らしています。",
-      skills:["JavaScript timers","Media playback","Ambient interaction","UI simplification"], evidence:"機能を増やすのではなく、利用場面に合わせて操作を削る設計を実装しました。"
+      label:"会話中にも使いやすい画面設計", summary:"動画の再生とタイマー制御で、会話のきっかけとなる話題を表示するアプリです。会話に集中できるよう、利用中の操作を少なくしています。",
+      skills:["JavaScript timers","Media playback","Ambient interaction","UI simplification"], evidence:"話題の切り替えを自動化し、画面を頻繁に操作しなくても使える構成にしました。"
     }
   },
   {
@@ -74,13 +74,13 @@ window.PROJECTS = [
     tags:["Security","Education","Interactive demo"], baseCats:["WEB","PROTOTYPE"], labCats:["EDUCATION","EXPERIMENT"],
     live:"https://ko-max-123.github.io/demo/", code:"https://github.com/ko-max-123/demo",
     lab:{
-      label:"聞くだけではなく、触って理解する", question:"情報セキュリティの説明を、見学者が自分で試せる体験に変えたい。",
-      summary:"複数のセキュリティテーマを、目的・操作・注意点と一緒に触れる小さなデモとして整理。説明者用のカンペを外し、見学者単独でも意味が分かる構成へ修正しました。",
-      points:["操作→結果→理解の流れ","各デモに目的・操作・注意を明示","説明者依存の文章を削除"]
+      label:"操作しながらセキュリティを学ぶ", question:"見学者が自分で試しながら、情報セキュリティの仕組みを理解できるようにしたい。",
+      summary:"情報セキュリティのテーマを、実際に操作できる小さなデモにまとめました。画面に目的や操作方法、注意点を記載し、見学者だけでも内容を理解しやすいように整えています。",
+      points:["操作して結果を確認できるデモ","各デモに目的・操作方法・注意点を記載","見学者向けに説明文を整理"]
     },
     base:{
-      label:"説明依存を減らす教育UI", summary:"情報セキュリティの概念を、体験型デモと利用者向け説明で理解できる構成に再設計。展示・見学用途を想定しています。",
-      skills:["Instructional UI","Front-end","Information architecture","Demo design"], evidence:"誰かが横で説明しなくても使えるよう、画面内の情報構造と導線を見直しました。"
+      label:"自分で試して学べるデモの設計", summary:"展示や見学での利用を想定し、情報セキュリティの概念を操作と説明で学べるデモにしました。目的や操作方法を画面内で確認できるようにしています。",
+      skills:["Instructional UI","Front-end","Information architecture","Demo design"], evidence:"初めて見る人が使いやすいよう、説明の順序と操作への案内を見直しました。"
     }
   },
   {
@@ -88,13 +88,13 @@ window.PROJECTS = [
     tags:["Jekyll","YAML","GitHub Pages"], baseCats:["WEB"], labCats:["WEB","MAINTAINABILITY"],
     live:"https://ko-max-123.github.io/test/", code:"https://github.com/ko-max-123/test",
     lab:{
-      label:"更新する人の作業を減らすサイト", question:"研究業績やメンバー追加のたびにHTMLを直接直す運用から離れたい。",
-      summary:"研究室サイトをJekyll化し、ヘッダー・フッター・カードを共通部品へ分離。メンバーや研究業績をMarkdown/YAMLデータとして管理できる構成にしました。",
-      points:["_includes / _layoutsへ共通化","メンバー・業績・ニュースをデータ化","著者IDでメンバーと業績を関連付け"]
+      label:"研究室サイトを更新しやすくする", question:"研究業績やメンバーの追加を、もっと手軽にできるようにしたい。",
+      summary:"研究室のサイトをJekyllに移行し、ヘッダーやフッター、カードを共通化しました。メンバーや研究業績はMarkdown・YAMLで管理し、内容を追加しやすい構成にしています。",
+      points:["_includes / _layoutsで共通部分を管理","メンバー・業績・ニュースをデータ化","著者IDでメンバーと業績を関連付け"]
     },
     base:{
-      label:"静的サイトの保守性改善", summary:"JekyllのテンプレートとYAML/Markdownを使い、画面とデータを分離。更新担当者がHTML構造を意識せずコンテンツを追加できる構成へ変更しました。",
-      skills:["Jekyll","YAML data modeling","Template architecture","GitHub Pages"], evidence:"制作だけでなく、継続更新を前提にしたデータ構造・共通化・運用方法まで設計しました。"
+      label:"更新しやすい静的サイトの構成", summary:"JekyllのテンプレートとYAML・Markdownを使い、画面の構造と掲載データを分けました。更新担当者がHTMLを直接編集せずに、内容を追加できる構成です。",
+      skills:["Jekyll","YAML data modeling","Template architecture","GitHub Pages"], evidence:"継続的な更新を考え、共通部分の管理方法と、メンバー・業績のデータ構造を整理しました。"
     }
   },
   {
@@ -102,13 +102,13 @@ window.PROJECTS = [
     tags:["3D","CAPTCHA","User study"], baseCats:["RESEARCH","WEB"], labCats:["RESEARCH","EXPERIMENT"],
     live:"https://ko-max-123.github.io/3d-cha-model/", code:"https://github.com/ko-max-123/3d-cha-model",
     lab:{
-      label:"空間認識を認証へ使う研究", question:"人が3D空間を認識する能力を利用すると、機械判定と人間の使いやすさを両立できるか。",
-      summary:"スマートフォン上で3D CAPTCHAを操作してもらい、正答率、所要時間、主観評価を取得する実験ページ。査読対応では統計検定、誤答傾向、占有率、平滑化リスクなども再評価しました。",
-      points:["3D CAPTCHAの操作フローをWeb化","実験結果とアンケートを収集","統計評価・誤答分析・攻撃耐性の見直し"]
+      label:"3D空間の認識を使った認証の研究", question:"3D空間を認識する力を使って、人が使いやすく、機械には解きにくい認証を作れるか。",
+      summary:"スマートフォンで3D CAPTCHAを操作してもらい、正答率や所要時間、使いやすさの評価を集める実験ページです。査読の指摘を受け、統計検定や誤答傾向、占有率、平滑化による攻撃のリスクも再評価しました。",
+      points:["ブラウザで3D CAPTCHAを操作・回答","実験結果とアンケートを収集","統計評価・誤答分析・攻撃耐性を再検討"]
     },
     base:{
-      label:"研究要件を実験UIへ変換", summary:"研究仮説を参加者が操作できる3D Web UIへ落とし込み、計測・アンケート・再評価まで含めた検証環境を構築しました。",
-      skills:["3D Web UI","Experiment design","Statistical evaluation","Usability testing"], evidence:"実装だけでなく、査読指摘に対する再評価と分析観点の追加まで行い、研究としての検証を継続しました。"
+      label:"研究の検証を支える実験ページ", summary:"参加者が3D CAPTCHAを操作し、回答やアンケートを記録できる実験環境を作りました。研究の検証に必要な計測と評価を、Web上で行える構成にしています。",
+      skills:["3D Web UI","Experiment design","Statistical evaluation","Usability testing"], evidence:"査読の指摘をもとに分析項目を追加し、実験結果や攻撃耐性を再評価しました。"
     }
   },
   {
@@ -116,13 +116,13 @@ window.PROJECTS = [
     tags:["Three.js","Point cloud","Authentication"], baseCats:["RESEARCH","WEB"], labCats:["RESEARCH","EXPERIMENT"],
     live:"https://ko-max-123.github.io/3dmodel-create/", code:"https://github.com/ko-max-123/3dmodel-create",
     lab:{
-      label:"回転する3D文字認証", question:"文字を3D点群として配置し、回転操作と空間認識を認証に使えるか。",
-      summary:"英大文字・数字を3D空間の点群として表示し、利用者が読み取って回答する認証プロトタイプ。文字球とノイズの分離、色・大きさ差、背景文字などを試しています。",
-      points:["Three.jsによる3D点群表示","回転操作と文字回答UI","認識性と攻撃耐性の両面を検討"]
+      label:"回転して読み取る3D文字認証", question:"点で表した3D文字を回転して読み取る操作を、認証に使えるか。",
+      summary:"英大文字や数字を3D空間の点群で表し、利用者が読み取って回答する認証の試作品です。文字を表す点とノイズの配置、色や大きさの違い、背景文字などを試しています。",
+      points:["Three.jsによる3D点群の表示","回転操作と文字の回答画面","読み取りやすさと攻撃耐性を検討"]
     },
     base:{
-      label:"Three.js認証プロトタイプ", summary:"3D空間の点群文字を使う認証方式を、ブラウザ上で検証可能な操作UIとして実装しました。",
-      skills:["Three.js","3D interaction","Authentication UX","Rapid prototyping"], evidence:"研究アイデアを、実際に操作・回答・評価できるプロトタイプへ短いサイクルで変換しています。"
+      label:"Three.jsを使った認証の試作", summary:"3D空間の点群文字を使う認証方式を、ブラウザで試せる形に実装しました。回転して文字を読み取り、回答するまでの操作を確認できます。",
+      skills:["Three.js","3D interaction","Authentication UX","Rapid prototyping"], evidence:"配置や見せ方を変えながら試作し、認証のアイデアを操作・評価できる形にしています。"
     }
   },
   {
@@ -130,13 +130,13 @@ window.PROJECTS = [
     tags:["QR","OTP","Image encoding"], baseCats:["RESEARCH","PROTOTYPE"], labCats:["RESEARCH","EXPERIMENT"],
     code:"https://github.com/ko-max-123/Dualqr",
     lab:{
-      label:"1枚の見た目に複数情報を重ねる", question:"QRコードの見え方を保ちながら、色・位相・時間方向に複数情報を持たせられるか。",
-      summary:"2URL切替、RGB多重、位相シフト、OTP動画などを検討。動画方式では135フレームから675bitを抽出する構成まで試作しました。",
-      points:["複数URLの切替方式を検討","RGB多重・位相シフトを比較","時間方向へ情報を埋め込むOTP動画"]
+      label:"QRコードに複数の情報を重ねる", question:"QRコードの見た目を保ちながら、色や位相、動画のフレームに情報を重ねられるか。",
+      summary:"2つのURLを切り替える方法や、RGB多重化、位相シフト、ワンタイムパスワード（OTP）を持つ動画を検討しています。動画方式では、135フレームから675bitを抽出する構成を試作しました。",
+      points:["複数URLを切り替える方法を検討","RGB多重化・位相シフトを比較","動画のフレームにOTPの情報を埋め込み"]
     },
     base:{
-      label:"画像・時間方向の情報多重化検証", summary:"QR表現に色・位相・フレーム系列を組み合わせ、複数情報やOTPを持たせる方式を検討・試作しました。",
-      skills:["QR encoding","Image processing","Temporal encoding","Prototype evaluation"], evidence:"単一方式に固定せず、複数の符号化方法を比較しながら実装可能性を検証しました。"
+      label:"画像と動画を使った情報の多重化", summary:"QRコードに色や位相、動画のフレームを組み合わせ、複数の情報やOTPを持たせる方法を試作しました。",
+      skills:["QR encoding","Image processing","Temporal encoding","Prototype evaluation"], evidence:"複数の符号化方法を比較し、それぞれの実装方法と実現可能性を検証しました。"
     }
   },
   {
@@ -144,13 +144,13 @@ window.PROJECTS = [
     tags:["Electron","Python","OpenCV","OCR"], baseCats:["TOOLS","PROTOTYPE"], labCats:["PLAY","TOOLS"],
     code:"https://github.com/ko-max-123/ark_tools",
     lab:{
-      label:"ゲーム画面を自分用ツールの入力にする", question:"スクリーンショットから募集タグを読み取り、ゲーム内の判断を補助できないか。",
-      summary:"アークナイツの画面キャプチャを入力に、テンプレートマッチングやOCRでタグを認識・解析するデスクトップツール。ElectronとPythonを組み合わせています。",
-      points:["画面キャプチャを入力化","OpenCV/OCRでタグ認識","Electron UIとPython処理を接続"]
+      label:"ゲーム画面から募集タグを読み取る", question:"スクリーンショットから募集タグを読み取り、ゲーム内の選択を助けたい。",
+      summary:"アークナイツの画面キャプチャから、テンプレートマッチングやOCRで募集タグを読み取るデスクトップツールです。Electronの画面とPythonの画像処理を組み合わせています。",
+      points:["画面キャプチャを解析に使用","OpenCV・OCRで募集タグを認識","Electronの画面とPythonの処理を連携"]
     },
     base:{
-      label:"画像解析デスクトップツール", summary:"ElectronのUIとPython/OpenCVの画像処理を組み合わせ、画面画像から情報を抽出して結果表示する処理フローを構築しました。",
-      skills:["Electron","Python","OpenCV","OCR"], evidence:"異なる実行環境を接続し、画像取得→解析→結果表示までを一つのデスクトップツールにまとめました。"
+      label:"画像解析を使うデスクトップツール", summary:"ElectronとPython/OpenCVを連携し、画面画像からタグの情報を読み取って結果を表示するツールを作りました。",
+      skills:["Electron","Python","OpenCV","OCR"], evidence:"画面の取得、画像の解析、結果の表示までを、一つのツールで行えるようにしました。"
     }
   },
 
@@ -159,72 +159,72 @@ window.PROJECTS = [
     id:"QA-001", title:"Android操作レコーダー / Appium", showLab:false, showBase:true, featuredBase:true,
     tags:["Appium","ADB","pytest","Android"], baseCats:["QA","AUTOMATION","TOOLS"],
     base:{
-      label:"モバイルテスト自動化PoC / 非公開", summary:"Windows PCとAndroid実機をUSB接続し、指操作のタップ・縦スクロール・横スワイプ・戻るをADBで記録。スクリーンショットとUI XML、Locator候補、画面比率座標をYAMLへ保存し、再生・pytest実行につなげる仕組みを試作しました。",
-      skills:["Appium","ADB","Python / pytest","UI hierarchy analysis"], evidence:"WebView DOMが取得できない場面も想定し、UI要素Locatorと画面比率座標の両方を記録するフォールバック設計にしました。"
+      label:"Androidの操作記録と再生", summary:"Windows PCとAndroid実機をUSBでつなぎ、タップやスクロール、スワイプ、戻る操作をADBで記録する仕組みを試作しました。画面画像やUIの構造、操作対象の候補、画面サイズに対する座標の比率をYAMLに保存し、操作の再生やpytestでの実行につなげています。",
+      skills:["Appium","ADB","Python / pytest","UI hierarchy analysis"], evidence:"WebView内の要素を取得できない場合に備え、要素を特定する情報と座標の両方を記録する設計にしました。"
     }
   },
   {
-    id:"QA-002", title:"Excelテストケース → Playwright PoC", showLab:false, showBase:true, featuredBase:true,
+    id:"QA-002", title:"ExcelテストケースのPlaywright変換", showLab:false, showBase:true, featuredBase:true,
     tags:["Playwright","Excel","Copilot","TypeScript"], baseCats:["QA","AUTOMATION","AI"],
     base:{
-      label:"既存テスト資産を自動化へつなぐPoC / 非公開", summary:"Excel/CATで管理されているテストケースを、Copilotを使ってPlaywrightシナリオへ変換する運用を検討。基本処理、外部環境設定、認証情報の分離、storageState再利用まで含む構成を作りました。",
-      skills:["Playwright","TypeScript","Excel parsing","M365 Copilot"], evidence:"既存Excelを捨てずに自動化へ段階移行できるよう、変換ルール・基準となるspec・環境設定・認証setupを分離しました。"
+      label:"既存のテストケースを使った自動化", summary:"Excelやテスト管理ツールCATのテストケースを、CopilotでPlaywrightのシナリオに変換する方法を検証しています。基本処理や環境設定、認証情報を分け、ログイン状態をstorageStateで再利用する構成を作りました。",
+      skills:["Playwright","TypeScript","Excel parsing","M365 Copilot"], evidence:"既存のテストケースを段階的に自動化できるよう、変換ルールやサンプル、環境設定、認証の準備処理を分けて整理しました。"
     }
   },
   {
     id:"QA-003", title:"テスト実施状況の見える化", showLab:false, showBase:true, featuredBase:true,
     tags:["QA operation","Planning","Excel"], baseCats:["QA","PROCESS"],
     base:{
-      label:"テスト運用改善 / 非公開", summary:"仕様理解不足、テストデータ準備と実施の同時進行、日々の予定共有不足という課題に対し、システム理解マップ・テスト実施可能一覧・1週間の作業予定・詰まり理由記録の4つに整理しました。",
-      skills:["Test management","Task visualization","Blocker analysis","Documentation"], evidence:"『その日やること』だけで進めず、実施可否・準備不足・詰まり理由を分離して、チーム内で状況を共有できる形にしました。"
+      label:"テストの準備状況と課題の共有", summary:"仕様の確認やデータの準備、作業予定の共有を進めやすくするため、システム理解マップ、実施可能なテストの一覧、週次予定、作業が止まる理由の記録を整えました。",
+      skills:["Test management","Task visualization","Blocker analysis","Documentation"], evidence:"実施できるテストと、準備や確認が必要な項目を分け、チームで状況を共有しやすくしました。"
     }
   },
   {
-    id:"QA-004", title:"エビデンスフォルダ自動生成", showLab:false, showBase:true, featuredBase:true,
+    id:"QA-004", title:"テスト証跡フォルダの自動生成", showLab:false, showBase:true, featuredBase:true,
     tags:["Excel","Python","Evidence management"], baseCats:["QA","TOOLS","PROCESS"],
     base:{
-      label:"テスト証跡整理ツール / 非公開", summary:"テスト仕様書Excelから、仕様書名→シナリオID/ID→端末別というフォルダを自動生成するツールを設計。期待値が空欄で連続するケースは『1~8』のように範囲フォルダへまとめ、複数Excelの一括読込にも対応する構成にしました。",
-      skills:["Excel parsing","File system automation","Python","HTML UI"], evidence:"人が大量の証跡フォルダを手作業する前提をやめ、仕様書の構造からフォルダ規則を生成する形へ置き換えました。"
+      label:"仕様書から証跡の保存先を作る", summary:"Excelのテスト仕様書を読み込み、仕様書名・シナリオID・端末ごとに証跡フォルダを作るツールを設計しました。期待値が空欄で続くケースは「1〜8」のようにまとめ、複数のExcelファイルを一括で読み込める構成にしています。",
+      skills:["Excel parsing","File system automation","Python","HTML UI"], evidence:"仕様書の構造からフォルダ名と階層を決めることで、保存先を手作業で作る負担を減らせるようにしました。"
     }
   },
   {
-    id:"QA-005", title:"大量エビデンス画像の仕分け", showLab:false, showBase:true, featuredBase:false,
+    id:"QA-005", title:"テスト証跡画像の仕分け", showLab:false, showBase:true, featuredBase:false,
     tags:["Image classification","Batch","Evidence"], baseCats:["QA","TOOLS"],
     base:{
-      label:"数千枚の画像整理PoC / 非公開", summary:"iOSスクリーンショットとAndroid端末を撮影した写真が混在する数千枚の証跡を、テスト境界に挟まる『しおり画像』を基準に分割する仕組みを試作。UIの一部画像を登録し、画像特徴からしおり判定する方向へ拡張しました。",
-      skills:["Image matching","Batch processing","File organization","Python"], evidence:"OCRだけに依存できない撮影画像を含むため、時間情報・画像特徴・しおり境界を組み合わせる設計にしました。"
+      label:"数千枚の証跡画像を整理する試作", summary:"iOSのスクリーンショットとAndroid端末を撮影した写真を、テストの区切りに入れた目印の「しおり画像」で仕分ける仕組みを試作しました。画面の一部を登録し、画像の特徴から目印を判定する処理も追加しました。",
+      skills:["Image matching","Batch processing","File organization","Python"], evidence:"文字を読み取りにくい写真も扱えるよう、時間情報や画像の特徴、目印の位置を組み合わせて仕分ける設計にしました。"
     }
   },
   {
-    id:"QA-006", title:"画面遷移図のWeb化プロトタイプ", showLab:false, showBase:true, featuredBase:false,
+    id:"QA-006", title:"画面遷移図のWeb化", showLab:false, showBase:true, featuredBase:false,
     tags:["Excel","Search UI","Maintainability"], baseCats:["QA","WEB","PROCESS"],
     base:{
-      label:"大規模Excel資料の保守改善 / 非公開", summary:"全画面を網羅している一方、重い・保守しにくい・目的画面を探しにくいExcel画面遷移図を、検索・関連表示しやすいWeb UIへ置き換えるプロトタイプを作成。Excelと画像から生成できる構成を検討しました。",
-      skills:["Information architecture","Search UI","Excel data modeling","Static web"], evidence:"既存Excelの『専門知識不要で全体を網羅』という長所を残しつつ、3か月ごとの更新負荷を下げる方向で再設計しました。"
+      label:"画面を探しやすくするWeb表示の試作", summary:"画面数が多く、更新や検索に手間のかかるExcelの画面遷移図を、Webで閲覧する試作品を作りました。画面の検索や関連画面の表示を備え、Excelと画像から生成する構成を検討しました。",
+      skills:["Information architecture","Search UI","Excel data modeling","Static web"], evidence:"Excelで全体を管理できる構成を生かしながら、目的の画面を探しやすくし、3か月ごとの更新作業を減らす方法を考えました。"
     }
   },
   {
     id:"QA-007", title:"操作マニュアル編集・HTML化ツール", showLab:false, showBase:true, featuredBase:false,
     tags:["Markdown","HTML","Authoring tool"], baseCats:["TOOLS","PROCESS","WEB"],
     base:{
-      label:"マニュアル保守支援 / 非公開", summary:"Excelベースの操作マニュアルをMarkdown/HTMLへ変換し、画面画像上をクリックして①②③などの説明番号を配置できる編集補助ツールを設計。新規・更新、Markdown出力、Excel出力まで一つの流れにまとめました。",
-      skills:["Markdown","HTML/CSS/JS","Coordinate mapping","Document generation"], evidence:"座標を手入力する運用をやめ、画像をクリックして説明位置を設定できるようにし、マニュアル更新の作業負荷を下げました。"
+      label:"マニュアルの作成・更新を支援", summary:"Excelの操作マニュアルをMarkdown・HTMLに変換し、画面画像に説明番号を配置できる編集ツールを設計しました。画像をクリックして番号の位置を指定でき、新規作成や更新、Markdown・Excelへの出力を一連の流れにまとめています。",
+      skills:["Markdown","HTML/CSS/JS","Coordinate mapping","Document generation"], evidence:"説明番号の位置を画像上で指定できるようにし、マニュアルを更新しやすい操作方法にしました。"
     }
   },
   {
     id:"QA-008", title:"低速ネットワーク試験環境", showLab:false, showBase:true, featuredBase:false,
     tags:["Windows","Python","Network testing"], baseCats:["QA","TOOLS"],
     base:{
-      label:"モバイル通信条件テスト支援 / 非公開", summary:"専用の低速Wi-FiやiOS開発者モードを使えない条件で、Windows PCをアクセスポイントとしてスマホを接続し、PC側で通信速度を制限する試験環境を検討。PythonとWindows標準機能だけで構成し、事前の環境チェックも用意しました。",
-      skills:["Windows networking","Python","Test environment design","Constraint handling"], evidence:"追加ソフトを自由に導入できない業務PCを想定し、利用可能な標準機能から試験条件を再現する方法を組み立てました。"
+      label:"通信が遅い条件でのテスト環境", summary:"専用の低速Wi-FiやiOSの開発者モードを使えない環境で、通信が遅い状態を再現する方法を検討しました。Windows PCにスマホを接続し、PC側で速度を制限する構成です。PythonとWindowsの標準機能を使い、事前の環境チェックも用意しました。",
+      skills:["Windows networking","Python","Test environment design","Constraint handling"], evidence:"ソフトの追加に制約がある業務PCを想定し、利用できる標準機能で試験環境を組む方法を整理しました。"
     }
   },
   {
     id:"QA-009", title:"AI生成テストケースのレビュー設計", showLab:false, showBase:true, featuredBase:false,
     tags:["M365 Copilot","Test design","Quality metrics"], baseCats:["QA","AI","PROCESS"],
     base:{
-      label:"AI活用の品質評価設計 / 非公開", summary:"生成AIにテストケースを作らせるだけでなく、人がレビューできる評価軸を設計。網羅性、正確性、実行可能性、重複、欠陥検出力、レビュー効率を分け、仕様書に基づく正解表・観点表と照合する運用を検討しました。",
-      skills:["Test design","M365 Copilot","Review criteria","Quality measurement"], evidence:"AI出力をそのまま採用せず、『何をもって良いテストケースとするか』を人間側で定義する仕組みにしました。"
+      label:"AIが作ったテストケースの評価", summary:"生成AIが作ったテストケースを、人が確認するための基準を整理しました。網羅性や正確性、実行可能性、重複、欠陥の見つけやすさ、レビューの効率を分け、仕様書から作った正解表や観点表と照合する方法を検討しました。",
+      skills:["Test design","M365 Copilot","Review criteria","Quality measurement"], evidence:"テストケースの良し悪しを判断する基準を明確にし、AIの出力を人が検証できる流れを設計しました。"
     }
   }
 ];

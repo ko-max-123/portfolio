@@ -44,7 +44,7 @@
       ${d.question?`<blockquote>${esc(d.question)}</blockquote>`:''}
       <p>${esc(d.summary)}</p>
       <ul class="micro-list">${arr(d.points).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
-      <div class="card-actions">${p.live?`<a class="live" target="_blank" rel="noopener" href="${esc(p.live)}">TOUCH IT ↗</a>`:''}${p.code?`<a target="_blank" rel="noopener" href="${esc(p.code)}">SOURCE ↗</a>`:''}${noLinks(p)?'<span class="private-label">NON-PUBLIC CASE</span>':''}</div>
+      <div class="card-actions">${p.live?`<a class="live" target="_blank" rel="noopener" href="${esc(p.live)}">試してみる ↗</a>`:''}${p.code?`<a target="_blank" rel="noopener" href="${esc(p.code)}">ソースを見る ↗</a>`:''}${noLinks(p)?'<span class="private-label">詳細非公開</span>':''}</div>
     </article>`;
   }
 
@@ -55,9 +55,9 @@
       <span class="context-label">${esc(d.label)}</span>
       <h3>${esc(p.title)}</h3>
       <p>${esc(d.summary)}</p>
-      <div class="evidence"><span>EVIDENCE</span>${esc(d.evidence)}</div>
+      <div class="evidence"><span>工夫した点</span>${esc(d.evidence)}</div>
       <div class="tags">${arr(d.skills).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div>
-      <div class="card-actions">${p.live?`<a class="live" target="_blank" rel="noopener" href="${esc(p.live)}">LIVE ↗</a>`:''}${p.code?`<a target="_blank" rel="noopener" href="${esc(p.code)}">CODE ↗</a>`:''}${noLinks(p)?'<span class="private-label">CUSTOMER DATA / SOURCE NOT PUBLISHED</span>':''}</div>
+      <div class="card-actions">${p.live?`<a class="live" target="_blank" rel="noopener" href="${esc(p.live)}">公開サイト ↗</a>`:''}${p.code?`<a target="_blank" rel="noopener" href="${esc(p.code)}">ソースを見る ↗</a>`:''}${noLinks(p)?'<span class="private-label">業務事例（詳細非公開）</span>':''}</div>
     </article>`;
   }
 
