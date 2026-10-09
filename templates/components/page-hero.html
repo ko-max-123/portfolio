@@ -1,0 +1,24 @@
+<!-- 制作一覧・経歴の共通導入部。note は説明枠のあるページだけ表示します。 -->
+<section class="page-hero">
+  <div class="container">
+    <p class="kicker">
+      <span class="only-lab">{{hero.lab.kicker}}</span>
+      <span class="only-base">{{hero.base.kicker}}</span>
+    </p>
+    <h1>
+      <span class="only-lab">{{hero.lab.title}}</span>
+      <span class="only-base">{{hero.base.title}}</span>
+    </h1>
+    <p>
+      <span class="only-lab">{{hero.lab.lead}}</span>
+      <span class="only-base">{{hero.base.lead}}</span>
+    </p>
+    <div class="mode-explain">
+      <i>
+      </i>
+      <span>
+        <span class="only-lab">{{hero.lab.mode}}</span>
+        <span class="only-base">{{hero.base.mode}}</span>
+      </span>
+    </div>{{{note}}}</div>
+</section>

@@ -1,0 +1,154 @@
+<!-- トップページの枠組み。文章・繰り返し項目は content/home.mjs で管理します。 -->
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="kicker">
+        <span class="only-lab">{{hero.kicker.lab}}</span>
+        <span class="only-base">{{hero.kicker.base}}</span>
+      </p>
+      <h1>
+        <span class="only-lab">{{{hero.heading.lab}}}</span>
+        <span class="only-base">{{{hero.heading.base}}}</span>
+      </h1>
+      <p class="lead">
+        <span class="only-lab">{{hero.lead.lab}}</span>
+        <span class="only-base">{{hero.lead.base}}</span>
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="./projects.html">
+          <span class="only-lab">{{hero.primaryLink.lab}}</span>
+          <span class="only-base">{{hero.primaryLink.base}}</span>
+        </a>
+        <button class="btn" data-random type="button">
+          <span class="only-lab">{{hero.randomLink.lab}}</span>
+          <span class="only-base">{{hero.randomLink.base}}</span>
+        </button>
+        <a class="btn" href="./career.html">
+          <span class="only-lab">{{hero.careerLink.lab}}</span>
+          <span class="only-base">{{hero.careerLink.base}}</span>
+        </a>
+      </div>
+    </div>
+    <aside class="workbench">
+      {{{workbench}}}
+      <div class="scribble">
+        <b>{{buildRule.label}}</b>{{buildRule.text}}</div>
+    </aside>
+    <aside class="operator-panel">
+      <div class="operator-head">
+        <span>{{operator.label}}</span>
+        <span>{{operator.status}}</span>
+      </div>
+      <div class="operator-body">
+        <div class="operator-name">
+          <div>
+            <h3>{{operator.name}}</h3>
+            <span>{{operator.current}}</span>
+          </div>
+          <span>{{operator.role}}</span>
+        </div>
+        <div class="operator-stats">{{{operatorStats}}}</div>
+        <div class="cap-strip">{{operator.summary}}</div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="ticker">
+  <div class="ticker-track">
+    <span>
+      <span class="only-lab">{{ticker.lab}}</span>
+      <span class="only-base">{{ticker.base}}</span>
+    </span>
+    <span>
+      <span class="only-lab">{{ticker.lab}}</span>
+      <span class="only-base">{{ticker.base}}</span>
+    </span>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="section-code">
+          <span class="only-lab">{{featured.code.lab}}</span>
+          <span class="only-base">{{featured.code.base}}</span>
+        </span>
+        <h2>
+          <span class="only-lab">{{featured.title.lab}}</span>
+          <span class="only-base">{{featured.title.base}}</span>
+        </h2>
+      </div>
+      <p class="section-intro">
+        <span class="only-lab">{{featured.intro.lab}}</span>
+        <span class="only-base">{{featured.intro.base}}</span>
+      </p>
+    </div>
+    <div class="project-wall" data-featured>
+    </div>
+    <div style="margin-top:26px">
+      <a class="btn" href="./projects.html">
+        <span class="only-lab">{{featured.link.lab}}</span>
+        <span class="only-base">{{featured.link.base}}</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="section-code">
+          <span class="only-lab">{{practice.code.lab}}</span>
+          <span class="only-base">{{practice.code.base}}</span>
+        </span>
+        <h2>
+          <span class="only-lab">{{practice.title.lab}}</span>
+          <span class="only-base">{{practice.title.base}}</span>
+        </h2>
+      </div>
+    </div>
+    <div class="lab-notes">
+      <div class="questions">
+        {{{questions}}}
+      </div>
+      <aside class="lab-manifesto">
+        <small>{{manifesto.label}}</small>
+        <h3>{{{manifesto.title}}}</h3>
+        <p>{{manifesto.before}}<strong>{{manifesto.emphasis}}</strong>{{manifesto.after}}</p>
+      </aside>
+    </div>
+    <div class="cap-grid">
+      {{{capabilities}}}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="console">
+      <div class="console-top">{{console.label}}</div>
+      <div class="console-body">
+        <div>
+          <span class="prompt">$</span> <span class="only-lab">{{console.focusCommand.lab}}</span>
+          <span class="only-base">{{console.focusCommand.base}}</span>
+        </div>
+        <div class="result">
+          <span class="only-lab">{{console.focus.lab}}</span>
+          <span class="only-base">{{console.focus.base}}</span>
+        </div>
+        <div>
+          <span class="prompt">$</span> <span class="only-lab">{{console.methodCommand.lab}}</span>
+          <span class="only-base">{{console.methodCommand.base}}</span>
+        </div>
+        <div class="result">
+          <span class="only-lab">{{console.method.lab}}</span>
+          <span class="only-base">{{console.method.base}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

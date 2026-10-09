@@ -1,0 +1,23 @@
+<!-- 全ページ共通のヘッダー。リンクは content/site.mjs で管理します。 -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="./index.html">
+      <span class="brand-mark">{{site.brand.mark}}</span>
+      <span class="brand-copy">
+        <strong>{{site.brand.title}}</strong>
+        <small>{{site.brand.subtitle}}</small>
+      </span>
+    </a>
+    <nav class="global-nav" data-nav>{{{navigation}}}</nav>
+    <div class="header-tools">
+      <div class="mode-switch">
+        <span data-mode-label>{{site.modes.lab.label}}</span>
+        <small data-mode-sub>{{site.modes.lab.sub}}</small>
+        <button type="button" data-theme-toggle aria-label="{{site.toggleLabel}}">
+        </button>
+      </div>
+      <b class="header-clock" data-clock>--:--:--</b>
+      <button class="menu-btn" data-menu-btn aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>

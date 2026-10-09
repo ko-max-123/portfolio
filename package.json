@@ -1,0 +1,12 @@
+{
+  "name": "tetsuyuki-portfolio",
+  "private": true,
+  "description": "Static portfolio with shared templates and editable content",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node --check app.js && node --check scripts/preview.mjs && node scripts/build.mjs --check && node --test",
+    "preview": "node scripts/preview.mjs",
+    "test": "node --test"
+  }
+}

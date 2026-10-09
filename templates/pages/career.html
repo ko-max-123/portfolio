@@ -1,0 +1,27 @@
+<!-- 経歴ページの枠組み。見出し間隔と表示モードのクラスを維持してください。 -->
+{{{pageHero}}}
+
+<section class="section lab-only-block">
+  <div class="container">
+    <span class="section-code">{{journeyCode}}</span>
+    <h2 style="margin-bottom:30px">{{journeyTitle}}</h2>
+    <div class="journey">
+      {{{journey}}}
+    </div>
+  </div>
+</section>
+
+<section class="section base-only-block">
+  <div class="container">
+    <span class="section-code">{{employmentCode}}</span>
+    <h2 style="margin-bottom:28px">{{employmentTitle}}</h2>
+    <div class="timeline">
+      {{{employment}}}
+    </div>
+    <h2 class="subhead">{{skillsTitle}}</h2>
+    <div class="cap-grid" style="display:grid">{{{skills}}}</div>
+    <h2 class="subhead">{{educationTitle}}</h2>
+    <div class="timeline">{{{education}}}</div>
+    <div class="note-box">{{note}}</div>
+  </div>
+</section>
