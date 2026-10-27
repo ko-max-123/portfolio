@@ -5,7 +5,7 @@ V5のLAB / BASEデザインを維持し、掲載文言を実際の経歴・制�
 ## モード
 
 - **LAB MODE**: 個人制作・研究。旅行、キャンプ、3D CAPTCHA、QR、画像処理、ゲーム支援などを、目的・試行錯誤・実装内容で表示します。
-- **BASE MODE**: 職務・技術・QA。Web開発、チームリード、株式会社SHIFTでのソフトウェア品質・テスト、Appium/Playwright PoC、業務改善ケースを表示します。
+- **BASE MODE**: 職務・技術・QA。Web開発、チームリード、ソフトウェア品質・テスト、自動化、業務改善の内容を表示します。
 
 ## Google Search Console
 

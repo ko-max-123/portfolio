@@ -22,3 +22,80 @@ body[data-theme="base"]{background:var(--base-bg);color:var(--base-text);backgro
 @media(max-width:900px){.header-inner{grid-template-columns:1fr auto}.global-nav{display:none;position:absolute;left:16px;right:16px;top:73px;padding:10px;border:2px solid currentColor;background:inherit;flex-direction:column;align-items:stretch}.global-nav.open{display:flex}.mode-switch>span,.mode-switch small,.header-clock{display:none}.menu-btn{display:block}.hero-grid{grid-template-columns:1fr}.workbench,.operator-panel{max-width:550px}.project-wall,body[data-theme="base"] .project-wall{grid-template-columns:repeat(2,1fr)}.cap-grid{grid-template-columns:repeat(2,1fr)}.lab-notes{grid-template-columns:1fr}}
 @media(max-width:620px){.container{width:min(var(--max),calc(100% - 20px))}.brand-copy small{display:none}.hero{padding-top:44px}.hero h1{font-size:clamp(48px,19vw,76px)}.project-wall,body[data-theme="base"] .project-wall,.cap-grid{grid-template-columns:1fr}.section-head{display:block}.section-intro{margin-top:12px}.project-card{min-height:0}.log-card{grid-template-columns:1fr;gap:8px}.footer-inner{align-items:flex-start;flex-direction:column}.shuffle{margin-left:0}.journey{padding-left:42px}.journey::before{left:13px}.journey-step::before{left:-39px;width:18px;height:18px}.mode-explain{width:auto}}
 .private-label{display:inline-flex;align-items:center;min-height:34px;padding:7px 10px;border:1px dashed currentColor;font:800 9px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.05em;opacity:.72}.fact-list{display:grid;gap:12px;margin-top:18px}.fact-row{display:grid;grid-template-columns:145px 1fr;gap:18px;padding:15px 0;border-top:1px solid currentColor}.fact-row small{font:800 9px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;opacity:.7}.fact-row p{margin:0}.note-box{margin-top:22px;padding:15px 17px;border:1px solid currentColor;font-size:12px;opacity:.82}body[data-theme="base"] .note-box{border-color:var(--base-line);background:var(--base-panel)}@media(max-width:620px){.fact-row{grid-template-columns:1fr;gap:4px}}
+
+
+/* Career v7.1: stabilize decorative layout and prevent collisions */
+.career-section-title{margin-bottom:30px!important}
+.journey{padding-left:52px}
+.journey-step{
+  overflow:visible;
+  padding:24px 24px 22px;
+  margin-bottom:24px;
+  transform:none!important;
+}
+.journey-step h3{line-height:1.35}
+.journey-step p{max-width:900px}
+.journey-tags,.career-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:14px;
+}
+.journey-tags span,.career-tags span{
+  display:inline-flex;
+  align-items:center;
+  min-height:28px;
+  padding:4px 8px;
+  border:1px solid currentColor;
+  background:rgba(255,255,255,.72);
+  font:800 9px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  line-height:1.25;
+}
+.log-card{
+  align-items:start;
+  overflow:hidden;
+  padding:26px;
+}
+.log-card::after{display:none}
+.log-body{min-width:0}
+.log-body h3{
+  padding-right:0;
+  line-height:1.35;
+  overflow-wrap:anywhere;
+}
+.log-body p{line-height:1.75}
+.log-card.compact{padding-top:20px;padding-bottom:20px}
+body[data-theme="base"] .career-tags span{
+  border-color:var(--base-line);
+  background:#0b1713;
+  color:#a2c7b5;
+}
+body[data-theme="base"] .career-cap-grid{display:grid}
+.mode-explain{
+  max-width:100%;
+  white-space:normal;
+}
+.mode-explain>span{min-width:0}
+.page-hero h1{overflow-wrap:anywhere}
+
+@media(max-width:900px){
+  .journey{padding-left:44px}
+  .journey-step{padding:20px}
+  .log-card{grid-template-columns:145px minmax(0,1fr);gap:20px}
+}
+@media(max-width:620px){
+  .page-hero{padding-top:42px}
+  .page-hero h1{font-size:clamp(46px,16vw,72px);line-height:.95}
+  .page-hero p{font-size:15px}
+  .journey{padding-left:30px}
+  .journey::before{left:8px;width:3px}
+  .journey-step{padding:18px;margin-bottom:18px;box-shadow:4px 4px 0 var(--ink)}
+  .journey-step::before{left:-30px;top:22px;width:14px;height:14px;border-width:2px}
+  .journey-step h3{font-size:21px}
+  .journey-step p{font-size:14px}
+  .journey-tags span,.career-tags span{font-size:8px}
+  .log-card{grid-template-columns:1fr;gap:8px;padding:20px}
+  .log-date{margin-bottom:2px}
+  .log-body h3{font-size:21px}
+  .career-section-title{font-size:34px!important}
+}
